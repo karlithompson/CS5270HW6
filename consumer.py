@@ -1,7 +1,9 @@
-import argparse, textwrap
+import argparse, textwrap, boto3, time, json, logging
 
 # parser = argparse.ArgumentParser()
 # parser.parse_args()
+
+print("boto3 is ready!")
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -17,13 +19,21 @@ def parse_args():
 
     parser.add_argument("--request-bucket", "-rb", type=str, required=True, metavar="BUCKET_NAME", help="Name of the bucket that contains widget requests.") # reading a single widget requests from bucket 2 in key order
     
-    parser.add_argument("--widget-bucket", "-wb", type=str, required=True, metavar="BUCKET_NAME",
+    parser.add_argument("--widget-bucket", "-wb", type=str, metavar="BUCKET_NAME",
                         help="Name of the S3 bucket that holds the widgets")
 
-    parser.add_argument("--dynamodb-widget-table", "-dwt", type=str, required=True, metavar="BUCKET_NAME",
+    parser.add_argument("--dynamodb-widget-table", "-dwt", type=str, metavar="BUCKET_NAME",
                         help="Name of the DynamoDB table that holds widgets")  
     
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    if not args.widget_bucket and not args.dynamodb_widget_table:
+        parser.error("You must specify either --widget-bucket OR --dynamodb-widget-table")
+
+    if args.widget_bucket and args.dynamodb_widget_table:
+        parser.error("You cannot specify both --widget-bucket AND --dynamodb-widget-table")
+    
+    return args
 
 if __name__ == "__main__":
     args = parse_args()
