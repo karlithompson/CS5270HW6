@@ -10,3 +10,6 @@ pip install -r requirements.txt
 ````
 python -m unittest test.py -v
 ````
+
+### Consumer logs
+Consumer logs are found in the consumer.log file
