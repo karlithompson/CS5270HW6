@@ -13,3 +13,9 @@ python -m unittest test.py -v
 
 ### Consumer logs
 Consumer logs are found in the consumer.log file
+
+### Help
+Run the following for help:
+```
+python consumer.py --help
+```
