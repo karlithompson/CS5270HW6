@@ -17,5 +17,5 @@ Consumer logs are found in the consumer.log file
 ### Help
 Run the following for help:
 ```
-python consumer.py --help
+python3 consumer.py --help
 ```
