@@ -42,7 +42,7 @@ class testConsumer(unittest.TestCase):
         }
 
         # call my function to store in fake dynamodb
-        store_dynamodb_widget(request, "widgets", dynamodb=fake_dynamodb)
+        store_dynamodb_widget(request, "widgets", region="us-east-1",dynamodb=fake_dynamodb)
 
         # verify that the item was stored correctly
         self.assertIn(("widgets", "123"), fake_dynamodb.items)
@@ -68,7 +68,7 @@ class testConsumer(unittest.TestCase):
             ],
         }
 
-        store_dynamodb_widget(request, "widgets", dynamodb=fake_dynamodb)
+        store_dynamodb_widget(request, "widgets", region="us-east-1", dynamodb=fake_dynamodb)
 
         self.assertIn(("widgets", "123"), fake_dynamodb.items)
 
@@ -90,7 +90,7 @@ class testConsumer(unittest.TestCase):
             "description": "Another widget for testing",
         }
 
-        store_dynamodb_widget(request, "widgets", dynamodb=fake_dynamodb)
+        store_dynamodb_widget(request, "widgets", region="us-east-1", dynamodb=fake_dynamodb)
 
         self.assertEqual(len(fake_dynamodb.items), 0)
 
@@ -110,7 +110,7 @@ class testConsumer(unittest.TestCase):
             ],
         }
 
-        store_dynamodb_widget(request, "widgets", dynamodb=fake_dynamodb)
+        store_dynamodb_widget(request, "widgets", region="us-east-1", dynamodb=fake_dynamodb)
 
         self.assertIn(("widgets", "123"), fake_dynamodb.items)
 

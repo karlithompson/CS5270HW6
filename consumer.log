@@ -551,3 +551,25 @@
 2025-10-27 15:55:13,861 [INFO] Verified DynamoDB insert: {'rating': {'S': '1.141814'}, 'width': {'S': '942'}, 'height': {'S': '831'}, 'label': {'S': 'SFB'}, 'owner': {'S': 'Sue Smith'}, 'size-unit': {'S': 'cm'}, 'description': {'S': 'SUSZNQVRDHAJYCALVX'}, 'id': {'S': '08254284-3fd1-4232-905f-b3730a7c6b8c'}, 'vendor': {'S': 'M'}, 'requestId': {'S': 'ac846257-5b0f-4609-b0b9-93c0bfb8f055'}, 'type': {'S': 'create'}}
 2025-10-27 15:55:13,946 [INFO] Deleted sample-requests/sample-requests/1612306375653 from usu-cs5270-hair-requests
 2025-10-27 15:55:14,305 [INFO] Polling interrupted by user.
+2025-10-27 16:53:01,780 [INFO] Final item to store in DynamoDB: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}, 'color': {'S': 'red'}, 'size': {'S': '111'}}
+2025-10-27 16:53:01,781 [INFO] Stored widget 123 with 6 attributes in DynamoDB table widgets
+2025-10-27 16:53:01,781 [INFO] Verified DynamoDB insert: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}, 'color': {'S': 'red'}, 'size': {'S': '111'}}
+2025-10-27 16:53:01,781 [INFO] Final item to store in DynamoDB: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}}
+2025-10-27 16:53:01,781 [INFO] Stored widget 123 with 4 attributes in DynamoDB table widgets
+2025-10-27 16:53:01,781 [INFO] Verified DynamoDB insert: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}}
+2025-10-27 16:53:01,781 [ERROR] Request missing widgetId, skipping
+2025-10-27 16:53:01,781 [ERROR] Request missing widgetId, skipping
+2025-10-27 16:53:01,781 [INFO] Stored widget 456 in S3 bucket my-widget-bucket with key widgets/s3_owner/456.json
+2025-10-27 16:53:30,978 [INFO] Final item to store in DynamoDB: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}, 'color': {'S': 'red'}, 'size': {'S': '111'}}
+2025-10-27 16:53:30,978 [INFO] Stored widget 123 with 6 attributes in DynamoDB table widgets
+2025-10-27 16:53:30,978 [INFO] Verified DynamoDB insert: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}, 'color': {'S': 'red'}, 'size': {'S': '111'}}
+2025-10-27 16:53:30,978 [WARNING] Skipping invalid attribute: {'value': '111'}
+2025-10-27 16:53:30,978 [INFO] Final item to store in DynamoDB: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}, 'color': {'S': 'red'}}
+2025-10-27 16:53:30,978 [INFO] Stored widget 123 with 5 attributes in DynamoDB table widgets
+2025-10-27 16:53:30,978 [INFO] Verified DynamoDB insert: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}, 'color': {'S': 'red'}}
+2025-10-27 16:53:30,979 [INFO] Final item to store in DynamoDB: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}}
+2025-10-27 16:53:30,979 [INFO] Stored widget 123 with 4 attributes in DynamoDB table widgets
+2025-10-27 16:53:30,979 [INFO] Verified DynamoDB insert: {'id': {'S': '123'}, 'owner': {'S': 'test_owner'}, 'label': {'S': 'Test Widget'}, 'description': {'S': 'A widget for testing'}}
+2025-10-27 16:53:30,979 [ERROR] Request missing widgetId, skipping
+2025-10-27 16:53:30,979 [ERROR] Request missing widgetId, skipping
+2025-10-27 16:53:30,979 [INFO] Stored widget 456 in S3 bucket my-widget-bucket with key widgets/s3_owner/456.json

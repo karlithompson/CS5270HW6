@@ -18,6 +18,8 @@ def parse_args():
               python consumer.py -rb usu-cs5250-blue-requests -wb usu-cs5250-blue-web
               python consumer.py --request-bucket=usu-cs5250-blue-requests --widget-bucket=usu-cs5250-blue-web
               python consumer.py -rb my-requests -dwt widgets
+                               
+              add --region REGION if not using default region us-east-1
         '''),
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
@@ -29,6 +31,8 @@ def parse_args():
 
     parser.add_argument("--dynamodb-widget-table", "-dwt", type=str, metavar="BUCKET_NAME",
                         help="Name of the DynamoDB table that holds widgets")  
+    
+    parser.add_argument("--region", "-r", type=str, default="us-east-1", help="AWS region (default: us-east-1)")
     
     args = parser.parse_args()
 
@@ -51,7 +55,7 @@ def fetch_widget_request(s3, bucket_name):
     return key, body
 
 def store_s3_widget(request, bucket_name, s3=None):
-    s3 = s3 or boto3.client('s3')
+    s3 = s3 or boto3.client('s3', region_name=args.region)
     if "widgetId" not in request:
         logging.error("Request missing widgetId, skipping")
         return
@@ -66,8 +70,8 @@ def store_s3_widget(request, bucket_name, s3=None):
     )
     logging.info(f"Stored widget {widget_id} in S3 bucket {bucket_name} with key {key}")
 
-def store_dynamodb_widget(request, table_name, dynamodb=None):
-    dynamodb = dynamodb or boto3.client('dynamodb')
+def store_dynamodb_widget(request, table_name, region, dynamodb=None):
+    dynamodb = dynamodb or boto3.client('dynamodb', region_name=region)
     item = {}
     if "widgetId" not in request:
         logging.error("Request missing widgetId, skipping")
@@ -124,7 +128,7 @@ def poll_requests(bucket_name, args):
                     store_s3_widget(request, args.widget_bucket)
                 elif args.dynamodb_widget_table:
                     logging.info(f"Storing widget in DynamoDB table: {args.dynamodb_widget_table}")
-                    store_dynamodb_widget(request, args.dynamodb_widget_table)
+                    store_dynamodb_widget(request, args.dynamodb_widget_table, args.region)
             except json.JSONDecodeError:
                 logging.error(f"Invalid JSON in {key}: {body}")
             
