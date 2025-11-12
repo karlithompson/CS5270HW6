@@ -111,13 +111,19 @@ def store_dynamodb_widget(request, table_name, region, dynamodb=None):
 
 def poll_requests(bucket_name, args):
     s3 =boto3.client('s3')
+    idle_timeout = 30      # seconds
+    poll_interval = 1.0    # wait 1 s between empty checks
+    last_activity = time.time()
 
     try:
         while True:
             key,body=fetch_widget_request(s3,bucket_name)
             if not key:
+                if time.time() - last_activity > idle_timeout:
+                    logging.info(f"No new requests for {idle_timeout} seconds. Stopping consumer.")
+                    break
                 logging.info("No requests found. Waiting...")
-                time.sleep(.01)
+                time.sleep(poll_interval)
                 continue
             try:
                 request = json.loads(body)
