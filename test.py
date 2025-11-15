@@ -1,6 +1,6 @@
 import os, sys, json
 import unittest
-from consumer import store_dynamodb_widget, store_s3_widget
+from consumer import store_dynamodb_widget, store_s3_widget, delete_widget
 
 # this helped me get more familiar with unittest: https://docs.python.org/3/library/unittest.html
 
@@ -12,6 +12,8 @@ class dynamoDB:
         self.items[(TableName, Item["id"]["S"])] = Item
     def get_item(self, TableName, Key):
         return {"Item": self.items.get((TableName, Key["id"]["S"]))}
+    def delete_item(self, TableName, Key):
+        return self.items.pop((TableName, Key["id"]["S"]), None)
 
 class s3Client:
     def __init__(self):
@@ -24,6 +26,35 @@ class s3Client:
         }
 
 class testConsumer(unittest.TestCase):
+
+    def test_delete_dynamodb(self):
+        """
+        Test that widget is deleted successfully
+        """
+        fake_dynamodb = dynamoDB()
+        fake_dynamodb.items[("widgets", "test-123")] = {
+            "id": {"S": "test-123"},
+            "owner": {"S": "karli"}
+        }
+        request = {
+            "type": "delete",
+            "requestId": "req-11",
+            "widgetId": "test-123",
+            "owner": "karli"
+        }
+
+        class Args:
+            def __init__(self):
+                self.widget_bucket = None
+                self.dynamodb_widget_table = "widgets"
+                self.region = "us-east-1"
+
+        args = Args()
+
+        delete_widget(request, args, dynamodb=fake_dynamodb)
+
+        self.assertNotIn(("widgets", "test-123"), fake_dynamodb.items)
+
     
     def test_Dynamodb(self):
         """

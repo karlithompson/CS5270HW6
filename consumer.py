@@ -114,18 +114,18 @@ def store_dynamodb_widget(request, table_name, region, dynamodb=None):
     )
     logging.info(f"Verified DynamoDB insert: {resp.get('Item')}")
 
-def delete_widget(widget, args):
+def delete_widget(widget, args, dynamodb=None, s3=None):
     widget_id = widget.get("widgetId")
     owner = widget.get("owner", "unknown_owner").replace(" ", "_")
 
     if args.widget_bucket:
         key = f"widgets/{owner}/{widget_id}.json"
-        s3 = boto3.client('s3', region_name=args.region)
+        s3 = s3 or boto3.client('s3', region_name=args.region)
         s3.delete_object(Bucket=args.widget_bucket, Key=key)
         logging.info(f"Deleted widget {widget_id} from S3 bucket {args.widget_bucket} with key {key}")
 
     elif args.dynamodb_widget_table:
-        dynamodb = boto3.client('dynamodb', region_name=args.region)
+        dynamodb = dynamodb or boto3.client('dynamodb', region_name=args.region)
         dynamodb.delete_item(
             TableName=args.dynamodb_widget_table,
             Key={"id": {"S": str(widget_id)}}
