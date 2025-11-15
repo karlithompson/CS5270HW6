@@ -19,3 +19,13 @@ Run the following for help:
 ```
 python3 consumer.py --help
 ```
+
+### Example
+
+Example delete json:
+{
+    "type": "delete",
+    "requestId": "req-11",
+    "widgetId": "test-123",
+    "owner": "karli"
+}
