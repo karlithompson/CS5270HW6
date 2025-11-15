@@ -18,7 +18,7 @@ def parse_args():
               python consumer.py -rb usu-cs5250-blue-requests -wb usu-cs5250-blue-web
               python consumer.py --request-bucket=usu-cs5250-blue-requests --widget-bucket=usu-cs5250-blue-web
               python consumer.py -rb my-requests -dwt widgets
-              python consumer.py -q cs5270-requests -st sqs -wb usu-cs5250-blue-web
+              python consumer.py -q cs5270-requests -wb usu-cs5250-blue-web
                                
               add --region REGION if not using default region us-east-1
         '''),
@@ -37,7 +37,7 @@ def parse_args():
 
     parser.add_argument("--queue-name", "-q", type=str, help="Name of the SQS queue that contains requests")
 
-    parser.add_argument("--source-type", "-st", type=str, choices=["s3", "sqs"], default="s3", help="Source type for widget requests: 's3' or 'sqs' (default: s3)")
+    # parser.add_argument("--source-type", "-st", type=str, choices=["s3", "sqs"], default="s3", help="Source type for widget requests: 's3' or 'sqs' (default: s3)")
     
     args = parser.parse_args()
 
@@ -164,12 +164,21 @@ def poll_s3_requests(bucket_name, args):
                 request = json.loads(body)
                 logging.info(f"Processing request: {request}")
 
-                if args.widget_bucket:
-                    logging.info(f"Storing widget in S3 bucket: {args.widget_bucket}")
-                    store_s3_widget(request, args.widget_bucket)
-                elif args.dynamodb_widget_table:
-                    logging.info(f"Storing widget in DynamoDB table: {args.dynamodb_widget_table}")
-                    store_dynamodb_widget(request, args.dynamodb_widget_table, args.region)
+                op = request.get("operation", request.get("type", "create")).lower()
+
+                if op == "create":
+                    if args.widget_bucket:
+                        logging.info(f"Storing widget in S3 bucket: {args.widget_bucket}")
+                        store_s3_widget(request, args.widget_bucket)
+                    elif args.dynamodb_widget_table:
+                        logging.info(f"Storing widget in DynamoDB table: {args.dynamodb_widget_table}")
+                        store_dynamodb_widget(request, args.dynamodb_widget_table, args.region)
+                elif op == "delete":
+                    delete_widget(request, args)
+                elif op == "update":
+                    update_widget(request, args)
+                else:
+                    logging.warning(f"Unsupported operation '{op}' in request: {request}")
             except json.JSONDecodeError:
                 logging.error(f"Invalid JSON in {key}: {body}")
             
@@ -209,7 +218,7 @@ def poll_sqs_requests(queue_name, args):
             for msg in messages:
                 try:
                     body = json.loads(msg['Body'])
-                    op = body.get("operation", "create").lower() #Default to create
+                    op = body.get("operation", body.get("type", "create")).lower()#Default to create
                     widget = body.get("widget", body) # in case operation is not there, assume whole body is widget
 
                     if op == "create":
@@ -245,15 +254,20 @@ def poll_sqs_requests(queue_name, args):
         sys.exit(0)
 
 def poll_requests(bucket_name, args):
-    if args.source_type == "sqs":
+    if args.queue_name:
         poll_sqs_requests(args.queue_name, args)
     else:
         poll_s3_requests(bucket_name, args)
 
 if __name__ == "__main__":
     args = parse_args()
-    if args.source_type == "s3":
-        logging.info(f"Starting consumer (source=S3) with request bucket: {args.request_bucket}")
-    elif args.source_type == "sqs":
+    # if args.source_type == "s3":
+    #     logging.info(f"Starting consumer (source=S3) with request bucket: {args.request_bucket}")
+    # elif args.source_type == "sqs":
+    #     logging.info(f"Starting consumer (source=SQS) with queue: {args.queue_name}")
+
+    if args.queue_name:
         logging.info(f"Starting consumer (source=SQS) with queue: {args.queue_name}")
+    elif args.request_bucket:
+        logging.info(f"Starting consumer (source=S3) with request bucket: {args.request_bucket}")
     poll_requests(args.request_bucket,args)
