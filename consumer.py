@@ -18,13 +18,14 @@ def parse_args():
               python consumer.py -rb usu-cs5250-blue-requests -wb usu-cs5250-blue-web
               python consumer.py --request-bucket=usu-cs5250-blue-requests --widget-bucket=usu-cs5250-blue-web
               python consumer.py -rb my-requests -dwt widgets
+              python consumer.py -q cs5270-requests -st sqs -wb usu-cs5250-blue-web
                                
               add --region REGION if not using default region us-east-1
         '''),
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
 
-    parser.add_argument("--request-bucket", "-rb", type=str, required=True, metavar="BUCKET_NAME", help="Name of the bucket that contains widget requests.") # reading a single widget requests from bucket 2 in key order
+    parser.add_argument("--request-bucket", "-rb", type=str, metavar="BUCKET_NAME", help="Name of the bucket that contains widget requests.") # reading a single widget requests from bucket 2 in key order
     
     parser.add_argument("--widget-bucket", "-wb", type=str, metavar="BUCKET_NAME",
                         help="Name of the S3 bucket that holds the widgets")
@@ -33,6 +34,10 @@ def parse_args():
                         help="Name of the DynamoDB table that holds widgets")  
     
     parser.add_argument("--region", "-r", type=str, default="us-east-1", help="AWS region (default: us-east-1)")
+
+    parser.add_argument("--queue-name", "-q", type=str, help="Name of the SQS queue that contains requests")
+
+    parser.add_argument("--source-type", "-st", type=str, choices=["s3", "sqs"], default="s3", help="Source type for widget requests: 's3' or 'sqs' (default: s3)")
     
     args = parser.parse_args()
 
@@ -109,7 +114,37 @@ def store_dynamodb_widget(request, table_name, region, dynamodb=None):
     )
     logging.info(f"Verified DynamoDB insert: {resp.get('Item')}")
 
-def poll_requests(bucket_name, args):
+def delete_widget(widget, args):
+    widget_id = widget.get("widgetId")
+    owner = widget.get("owner", "unknown_owner").replace(" ", "_")
+
+    if args.widget_bucket:
+        key = f"widgets/{owner}/{widget_id}.json"
+        s3 = boto3.client('s3', region_name=args.region)
+        s3.delete_object(Bucket=args.widget_bucket, Key=key)
+        logging.info(f"Deleted widget {widget_id} from S3 bucket {args.widget_bucket} with key {key}")
+
+    elif args.dynamodb_widget_table:
+        dynamodb = boto3.client('dynamodb', region_name=args.region)
+        dynamodb.delete_item(
+            TableName=args.dynamodb_widget_table,
+            Key={"id": {"S": str(widget_id)}}
+        )
+        logging.info(f"Deleted widget {widget_id} from DynamoDB table {args.dynamodb_widget_table}")
+    
+
+def update_widget(widget, args):    
+    # I think it might be easiest if I delete then just put it in again.
+
+    delete_widget(widget, args)
+    if args.widget_bucket:
+        logging.info(f"Updating widget in S3 bucket: {args.widget_bucket}")
+        store_s3_widget(widget, args.widget_bucket)
+    elif args.dynamodb_widget_table:
+        logging.info(f"Updating widget in DynamoDB table: {args.dynamodb_widget_table}")
+        store_dynamodb_widget(widget, args.dynamodb_widget_table, args.region)
+
+def poll_s3_requests(bucket_name, args):
     s3 =boto3.client('s3')
     idle_timeout = 30      # seconds
     poll_interval = 1.0    # wait 1 s between empty checks
@@ -146,7 +181,79 @@ def poll_requests(bucket_name, args):
         logging.info("Polling interrupted by user.")
         sys.exit(0)
 
+def poll_sqs_requests(queue_name, args):
+    #TODO: Test
+    sqs = boto3.client('sqs')
+    queue_url = sqs.get_queue_url(QueueName=queue_name)['QueueUrl']
+    idle_timeout = 30      
+    poll_interval = 1.0   
+    last_activity = time.time()
+
+    try:
+        while True: 
+            response = sqs.receive_message(
+                QueueUrl=queue_url,
+                MaxNumberOfMessages=10,
+                WaitTimeSeconds=10
+            )
+            messages = response.get('Messages', [])
+
+            if not messages:
+                if time.time() - last_activity > idle_timeout:
+                    logging.info(f"No new requests for {idle_timeout} seconds. Stopping consumer.")
+                    break
+                logging.info("No requests found. Waiting...")
+                time.sleep(poll_interval)
+                continue
+
+            for msg in messages:
+                try:
+                    body = json.loads(msg['Body'])
+                    op = body.get("operation", "create").lower() #Default to create
+                    widget = body.get("widget", body) # in case operation is not there, assume whole body is widget
+
+                    if op == "create":
+                        logging.info(f"Processing create request: {widget}")
+
+                        if args.widget_bucket:
+                            logging.info(f"Storing widget in S3 bucket: {args.widget_bucket}")
+                            store_s3_widget(widget, args.widget_bucket)
+                        elif args.dynamodb_widget_table:
+                            logging.info(f"Storing widget in DynamoDB table: {args.dynamodb_widget_table}")
+                            store_dynamodb_widget(widget, args.dynamodb_widget_table, args.region) # Not sure if i need region
+
+                    elif op == "delete":
+                        delete_widget(widget, args)
+
+                    elif op == "update":
+                        update_widget(widget, args)
+                    else:
+                        logging.warning(f"Unsupported operation '{op}' in message: {body}")
+
+                    sqs.delete_message( 
+                        QueueUrl=queue_url,
+                        ReceiptHandle=msg['ReceiptHandle']
+                    )
+                    logging.info(f"Deleted message from SQS queue: {msg['MessageId']}")
+                    last_activity = time.time()
+
+                except Exception as e:
+                    logging.error(f"Error processing message: {e}")
+
+    except KeyboardInterrupt:
+        logging.info("Polling interrupted by user.")
+        sys.exit(0)
+
+def poll_requests(bucket_name, args):
+    if args.source_type == "sqs":
+        poll_sqs_requests(args.queue_name, args)
+    else:
+        poll_s3_requests(bucket_name, args)
+
 if __name__ == "__main__":
     args = parse_args()
-    logging.info("Starting consumer with request bucket: %s", args.request_bucket)
+    if args.source_type == "s3":
+        logging.info(f"Starting consumer (source=S3) with request bucket: {args.request_bucket}")
+    elif args.source_type == "sqs":
+        logging.info(f"Starting consumer (source=SQS) with queue: {args.queue_name}")
     poll_requests(args.request_bucket,args)

@@ -5788,3 +5788,298 @@
 2025-10-27 23:04:08,767 [INFO] No requests found. Waiting...
 2025-10-27 23:04:08,819 [INFO] No requests found. Waiting...
 2025-10-27 23:04:08,844 [INFO] Polling interrupted by user.
+2025-11-11 22:25:43,953 [INFO] Starting consumer with request bucket: usu-cs5270-hair-requests
+2025-11-11 22:25:43,998 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-11 22:28:07,438 [INFO] Starting consumer with request bucket: usu-cs5270-hair-requests
+2025-11-11 22:28:07,453 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-11 22:28:07,812 [INFO] No requests found. Waiting...
+2025-11-11 22:28:08,886 [INFO] No requests found. Waiting...
+2025-11-11 22:28:09,965 [INFO] No requests found. Waiting...
+2025-11-11 22:28:11,061 [INFO] No requests found. Waiting...
+2025-11-11 22:28:12,141 [INFO] No requests found. Waiting...
+2025-11-11 22:28:13,229 [INFO] No requests found. Waiting...
+2025-11-11 22:28:14,308 [INFO] No requests found. Waiting...
+2025-11-11 22:28:15,382 [INFO] No requests found. Waiting...
+2025-11-11 22:28:16,463 [INFO] No requests found. Waiting...
+2025-11-11 22:28:17,538 [INFO] No requests found. Waiting...
+2025-11-11 22:28:18,618 [INFO] No requests found. Waiting...
+2025-11-11 22:28:19,696 [INFO] No requests found. Waiting...
+2025-11-11 22:28:20,816 [INFO] No requests found. Waiting...
+2025-11-11 22:28:21,894 [INFO] No requests found. Waiting...
+2025-11-11 22:28:22,975 [INFO] No requests found. Waiting...
+2025-11-11 22:28:24,054 [INFO] No requests found. Waiting...
+2025-11-11 22:28:25,158 [INFO] No requests found. Waiting...
+2025-11-11 22:28:26,236 [INFO] No requests found. Waiting...
+2025-11-11 22:28:27,307 [INFO] No requests found. Waiting...
+2025-11-11 22:28:28,386 [INFO] No requests found. Waiting...
+2025-11-11 22:28:29,467 [INFO] No requests found. Waiting...
+2025-11-11 22:28:30,547 [INFO] No requests found. Waiting...
+2025-11-11 22:28:31,624 [INFO] No requests found. Waiting...
+2025-11-11 22:28:32,708 [INFO] No requests found. Waiting...
+2025-11-11 22:28:33,784 [INFO] No requests found. Waiting...
+2025-11-11 22:28:34,903 [INFO] No requests found. Waiting...
+2025-11-11 22:28:36,000 [INFO] No requests found. Waiting...
+2025-11-11 22:28:37,076 [INFO] No requests found. Waiting...
+2025-11-11 22:28:38,193 [INFO] No new requests for 30 seconds. Stopping consumer.
+2025-11-11 23:40:02,659 [INFO] Starting consumer with request bucket: usu-cs5270-hair-requests
+2025-11-11 23:40:02,675 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-11 23:40:03,113 [INFO] Processing request: {'type': 'create', 'requestId': 'e80fab52-71a5-4a76-8c4d-11b66b83ca2a', 'widgetId': '8123f304-f23f-440b-a6d3-80e979fa4cd6', 'owner': 'Mary Matthews', 'label': 'JWJYY', 'description': 'THBRNVNQPYAWNHGRGUKIOWCKXIVNDLWOIQTADHVEVMUAJWDONEPUEAXDITDSHJTDLCMHHSESFXSDZJCBLGIKKPUYAWKQAQI', 'otherAttributes': [{'name': 'width-unit', 'value': 'cm'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'rating', 'value': '2.580677'}, {'name': 'note', 'value': 'FEGYXHIJCTYNUMNMGZBEIDLKXYFNHFLVDYZRNWUDQAKQSVFLPRJTTXARVEIFDOLTUSWZZWVERNWPPOEYSUFAKKAPAGUALGXNDOVPNKQQKYWWOUHGOJWKAJGUXXBXLWAKJCIVPJYRMRWMHRUVBGVILZRMESQQJRBLXISNFCXGGUFZCLYAVLRFMJFLTBOTLKQRLWXALLBINWALJEMUVPNJWWRWLTRIBIDEARTCSLZEDLZRCJGSMKUOZQUWDGLIVILTCXLFIJIULXIFGRCANQPITKQYAKTPBUJAMGYLSXMLVIOROSBSXTTRULFYPDFJSFOMCUGDOZCKEUIUMKMMIRKUEOMVLYJNJQSMVNRTNGH'}]}
+2025-11-11 23:40:03,113 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:07,798 [INFO] Stored widget 8123f304-f23f-440b-a6d3-80e979fa4cd6 in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6.json
+2025-11-11 23:40:07,884 [INFO] Deleted sample-requests/1612306368338 from usu-cs5270-hair-requests
+2025-11-11 23:40:08,046 [INFO] Processing request: {'type': 'create', 'requestId': '9ca0d18a-57ab-4ac6-89dc-146f092ea9fe', 'widgetId': 'ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6', 'owner': 'John Jones', 'label': 'QQGRLNZY', 'description': 'JLVIEOHPQXKDXKPHOHFOXNKSYDEWRNEQWMPVPVHZVJCHCUIIWSRXITPWOKTMHULMVUNWGRREQYPQYO', 'otherAttributes': [{'name': 'size', 'value': '926'}, {'name': 'height', 'value': '828'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'rating', 'value': '1.6420901'}]}
+2025-11-11 23:40:08,046 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:08,370 [INFO] Stored widget ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6.json
+2025-11-11 23:40:08,449 [INFO] Deleted sample-requests/1612306369227 from usu-cs5270-hair-requests
+2025-11-11 23:40:08,618 [INFO] Processing request: {'type': 'create', 'requestId': 'ecf1f141-a125-4f25-af13-04ec28dd6b44', 'widgetId': '2b8186fc-11a4-4b97-b048-571fe200e646', 'owner': 'John Jones', 'label': 'V', 'description': 'VKZKAPGESWQYALXNPFOIWGUKDPRFGZCSYPBYIAJLYUMVTAULFIFIMLVGDKZJSRVOVFSYCSCJRMYFZNRMUVINHQRVTVSOOP', 'otherAttributes': [{'name': 'price', 'value': '6.36'}, {'name': 'quantity', 'value': '564'}, {'name': 'note', 'value': 'IZWAANKACMEEZRUQJSCPRIEUQHLEPAKUAXTQMILEBDMDCTERPHYCLCSCXMBCEFYXFIWVUCLGXSPSUKBVLAPYFOJPJROYCHPF'}]}
+2025-11-11 23:40:08,618 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:08,919 [INFO] Stored widget 2b8186fc-11a4-4b97-b048-571fe200e646 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/2b8186fc-11a4-4b97-b048-571fe200e646.json
+2025-11-11 23:40:09,000 [INFO] Deleted sample-requests/1612306369451 from usu-cs5270-hair-requests
+2025-11-11 23:40:09,166 [INFO] Processing request: {'type': 'create', 'requestId': 'b897b7f0-ffba-4960-a611-213c66e75112', 'widgetId': '3b7fef78-f757-424d-9c0c-431768022528', 'owner': 'Mary Matthews', 'label': 'F', 'description': 'PFZCIEPDAYIYRAKNO', 'otherAttributes': [{'name': 'size', 'value': '504'}, {'name': 'height', 'value': '431'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'quantity', 'value': '786'}]}
+2025-11-11 23:40:09,166 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:09,468 [INFO] Stored widget 3b7fef78-f757-424d-9c0c-431768022528 in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/3b7fef78-f757-424d-9c0c-431768022528.json
+2025-11-11 23:40:09,545 [INFO] Deleted sample-requests/1612306369713 from usu-cs5270-hair-requests
+2025-11-11 23:40:09,713 [INFO] Processing request: {'type': 'create', 'requestId': '8b493c24-02b8-40c2-bca8-6a0cef8737c0', 'widgetId': '6cea7243-924a-4bc9-9779-8bc89e91acdf', 'owner': 'Sue Smith', 'label': 'IUGSPN', 'description': 'ETHOQJFDFK', 'otherAttributes': [{'name': 'size', 'value': '586'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'height', 'value': '545'}, {'name': 'width', 'value': '922'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'price', 'value': '4.98'}, {'name': 'quantity', 'value': '180'}, {'name': 'vendor', 'value': 'QANSJAELVXENT'}]}
+2025-11-11 23:40:09,714 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:10,027 [INFO] Stored widget 6cea7243-924a-4bc9-9779-8bc89e91acdf in S3 bucket usu-cs5270-hair-web with key widgets/Sue_Smith/6cea7243-924a-4bc9-9779-8bc89e91acdf.json
+2025-11-11 23:40:10,107 [INFO] Deleted sample-requests/1612306369907 from usu-cs5270-hair-requests
+2025-11-11 23:40:10,303 [INFO] Processing request: {'type': 'create', 'requestId': '8709c06d-9d32-464a-a015-48495781c455', 'widgetId': '5c94f104-a9b3-4fed-a039-2cc4c631d042', 'owner': 'John Jones', 'label': 'GEDOQ', 'description': 'KCBCDPEATHQBDXJFSQNGRDTKHGFUUTPXRMQFWALYJPYIUBRGOMQCRVCLKJTKRXTDLCQKCHZCIIZVJQVUZYPTZMDHV', 'otherAttributes': [{'name': 'size', 'value': '777'}, {'name': 'height', 'value': '129'}, {'name': 'width', 'value': '772'}, {'name': 'length', 'value': '46'}, {'name': 'rating', 'value': '1.6434183'}, {'name': 'note', 'value': 'AZOALXMZWOXIXSAKHWPRGTDVRMFUQGIYTLYISZRVRIWQXIBZEBZNEOJBEKOQHCHRCNRBFGMYAPYOHZDIZOTMQJYPUULPVELSVVYVCYBTFWAEZASLGIKCISEDATXIZZYFQCWUMUOMMLXLEPCQFPIKHOCMHGIFMLIBEUYZCWEHOBTXSMTGXOCHHKKWXRXKGFLUTCRMFVHSLLYSCPMOBXFFDWELHLQWSTAPWMNJMPBIBJVOGOFKPAWLUCGBCVHYBKZIFXZYNDIKNDWKRYGCCGIMCXOSEFNGXRCLONQWFYIKZVMVGFDDXHBCWGS'}]}
+2025-11-11 23:40:10,303 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:10,619 [INFO] Stored widget 5c94f104-a9b3-4fed-a039-2cc4c631d042 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/5c94f104-a9b3-4fed-a039-2cc4c631d042.json
+2025-11-11 23:40:10,702 [INFO] Deleted sample-requests/1612306370099 from usu-cs5270-hair-requests
+2025-11-11 23:40:10,880 [INFO] Processing request: {'type': 'create', 'requestId': 'a7447013-eefe-4755-9cc4-7dbc83f725b2', 'widgetId': '0510d371-0191-43d9-81d5-5a163659ae6f', 'owner': 'Mary Matthews', 'label': 'X', 'description': '', 'otherAttributes': [{'name': 'height-unit', 'value': 'cm'}, {'name': 'length', 'value': '438'}, {'name': 'quantity', 'value': '456'}, {'name': 'vendor', 'value': 'YDZKPRAAZH'}, {'name': 'note', 'value': 'EPDKUWMAOOYHKPHEENRAMFTIHKDOWAFBCQRSVISUPMIGLQBINKRRDVFGJQASCBUVGBCPAMUTTALNYXAWUOOMMWWCVRVTLHLATBVZANNTYSVGZGZMVLTGRIQQGOARQLZTBQQCEYJEGZKFXOFCBAOYJWKGONXHAZGQYGELQSWEXYXQEURGGHOPJLIJQWGFTQTKMNMAXJNUGOFJCKANIWUUXVLRFQVRTFVRBZWVMTZGUJMB'}]}
+2025-11-11 23:40:10,881 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:11,205 [INFO] Stored widget 0510d371-0191-43d9-81d5-5a163659ae6f in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/0510d371-0191-43d9-81d5-5a163659ae6f.json
+2025-11-11 23:40:11,288 [INFO] Deleted sample-requests/1612306370344 from usu-cs5270-hair-requests
+2025-11-11 23:40:11,444 [INFO] Processing request: {'type': 'update', 'requestId': 'e47f8835-b36b-4643-9d3c-bb52b753ffbf', 'widgetId': '5c94f104-a9b3-4fed-a039-2cc4c631d042', 'owner': 'John Jones', 'description': 'GEDOQ', 'otherAttributes': [{'name': 'color', 'value': 'pink'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length', 'value': '540'}, {'name': 'rating', 'value': '3.8907907'}, {'name': 'price', 'value': '42.27'}, {'name': 'quantity', 'value': '72'}, {'name': 'vendor', 'value': 'RTPRZNV'}]}
+2025-11-11 23:40:11,444 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:11,759 [INFO] Stored widget 5c94f104-a9b3-4fed-a039-2cc4c631d042 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/5c94f104-a9b3-4fed-a039-2cc4c631d042.json
+2025-11-11 23:40:11,836 [INFO] Deleted sample-requests/1612306370542 from usu-cs5270-hair-requests
+2025-11-11 23:40:12,034 [INFO] Processing request: {'type': 'create', 'requestId': '00c9a0a8-6207-492b-8cd6-c1df2d38588e', 'widgetId': '1dbcba17-aff2-4b62-9d8e-0e6c2b58ed86', 'owner': 'John Jones', 'label': 'IQ', 'description': 'POWVJDEMWNMRABWCWCZFBMAATSLFDTKXKPHVNTLAUPWBVWSWZFJOYFENEKLBALMHZUNBAWTEHGANIUIRLKNSNOAFGENFROED', 'otherAttributes': [{'name': 'color', 'value': 'pink'}, {'name': 'width-unit', 'value': 'cm'}]}
+2025-11-11 23:40:12,035 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:12,354 [INFO] Stored widget 1dbcba17-aff2-4b62-9d8e-0e6c2b58ed86 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/1dbcba17-aff2-4b62-9d8e-0e6c2b58ed86.json
+2025-11-11 23:40:12,430 [INFO] Deleted sample-requests/1612306370839 from usu-cs5270-hair-requests
+2025-11-11 23:40:12,593 [INFO] Processing request: {'type': 'update', 'requestId': 'a606601e-4861-4cf8-b948-f534505c24d0', 'widgetId': '0510d371-0191-43d9-81d5-5a163659ae6f', 'owner': 'Mary Matthews', 'description': 'LJEQMYCCJRZDQFJETHKWYRMWTOPRQYEBWFWQHQUPVTGRXURPPKEYAPEEYAAV', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'size', 'value': '360'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'height', 'value': '920'}, {'name': 'width', 'value': '103'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'rating', 'value': '3.6255655'}, {'name': 'price', 'value': '98.76'}, {'name': 'note', 'value': 'YZAVYFSDXEPIARJWLVFLBMSADGGIVUVSTFHUCKOSWFVKWODINGKECEZFKHVLGWFKYHYVQZVHTMROSVTXMSWQGUMHFORJIZYOXPNOZLFPMCFQPKNRWMWUBTTPOVYPZWODIGBDCKZTBBNICWTPRONOMCCBZUJAYCRHFOJLPKHHELORIRLPLZGUQQHPBTRYZCJKZHMDUSFTXXGFTQHALLTPFIESBIUTKNNBYNDYROAEYQUNUFMZDYDKMVTMRPJMSBPLQVYZNEYAEUXIAQOJEXTLISTXIEESSTZYQDSQKLNGSJYMVGDZSSNHLFAIJWEVTRNQAYQPEITGNZSLERCGJIEVCVMB'}]}
+2025-11-11 23:40:12,593 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:12,950 [INFO] Stored widget 0510d371-0191-43d9-81d5-5a163659ae6f in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/0510d371-0191-43d9-81d5-5a163659ae6f.json
+2025-11-11 23:40:13,063 [INFO] Deleted sample-requests/1612306371037 from usu-cs5270-hair-requests
+2025-11-11 23:40:13,214 [INFO] Processing request: {'type': 'delete', 'requestId': '4509d06d-9d32-464a-a015-48495771c433', 'widgetId': '5c94f104-a9b3-4fed-a039-2cc4c631d042', 'owner': 'John Jones'}
+2025-11-11 23:40:13,214 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:13,544 [INFO] Stored widget 5c94f104-a9b3-4fed-a039-2cc4c631d042 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/5c94f104-a9b3-4fed-a039-2cc4c631d042.json
+2025-11-11 23:40:13,624 [INFO] Deleted sample-requests/1612306371375 from usu-cs5270-hair-requests
+2025-11-11 23:40:13,812 [INFO] Processing request: {'type': 'update', 'requestId': '4365a5ce-0ac3-4031-854e-020f246fc1e4', 'widgetId': '3b7fef78-f757-424d-9c0c-431768022528', 'owner': 'Mary Matthews', 'description': 'OEKHSWONMYQ', 'otherAttributes': [{'name': 'color', 'value': 'orange'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'width', 'value': '414'}, {'name': 'length', 'value': '909'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'rating', 'value': '0.39863378'}, {'name': 'note', 'value': 'OJMVAQSHUSYBAC'}]}
+2025-11-11 23:40:13,812 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:14,134 [INFO] Stored widget 3b7fef78-f757-424d-9c0c-431768022528 in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/3b7fef78-f757-424d-9c0c-431768022528.json
+2025-11-11 23:40:14,214 [INFO] Deleted sample-requests/1612306371675 from usu-cs5270-hair-requests
+2025-11-11 23:40:14,378 [INFO] Processing request: {'type': 'create', 'requestId': 'f003fcb9-7c74-4db0-9077-33bdd90ed0f9', 'widgetId': '6984abeb-5b24-42eb-93cc-3a5bef6b4b8a', 'owner': 'Mary Matthews', 'label': 'PUMMCL', 'description': 'PSOQBDC', 'otherAttributes': [{'name': 'color', 'value': 'green'}, {'name': 'width', 'value': '753'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'rating', 'value': '0.85021585'}, {'name': 'price', 'value': '89.56'}]}
+2025-11-11 23:40:14,378 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:14,765 [INFO] Stored widget 6984abeb-5b24-42eb-93cc-3a5bef6b4b8a in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/6984abeb-5b24-42eb-93cc-3a5bef6b4b8a.json
+2025-11-11 23:40:14,843 [INFO] Deleted sample-requests/1612306371974 from usu-cs5270-hair-requests
+2025-11-11 23:40:15,003 [INFO] Processing request: {'type': 'update', 'requestId': '840117b1-b4b8-4750-8757-36bc5a441f9e', 'widgetId': '8123f304-f23f-440b-a6d3-80e979fa4cd6', 'owner': 'Mary Matthews', 'description': 'GEYPOLQOEELYDNNLBCLPQGTNIAGBJMIGGKD', 'otherAttributes': [{'name': 'color', 'value': 'yellow'}, {'name': 'size', 'value': '301'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'height', 'value': '637'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width', 'value': '85'}, {'name': 'rating', 'value': '0.23102671'}, {'name': 'price', 'value': '24.44'}, {'name': 'quantity', 'value': '843'}, {'name': 'vendor', 'value': 'TKDWESJEFIW'}, {'name': 'note', 'value': 'ZDXTSRLNLKGBPEZOUAQOKQSXONDVUGTOAVAKVMMGJJCMHVSXUNVFWCTKEDPIZROGHEKCIVAWEOMKMWGQCRZJXWAECGNCUCXGKBWNMKGHUDRJPXYQOFNZXYRPYFWXGYKEMJNGAKIHLXHHNOJJIJFFTVGUIVCPJOKOEEJWLDAJDKWMZREXDWTLPJMPOOEASBTZUOCSAZOVCNHOWWMVURWXOHSYMNXBKTBHVWCCUNULSLRNDUTZHKHDNBWTOPRPERHKEUTPOBQAJYSNJXFDDKSWJACWUJIBQFORREFKZIWEVBBIGZUEYPFTCVJQWMVAYXLENZZVYPRBRRXGPAAKLFBDIMNKDDNEBJZVORUVRUUBOLWTAKXJO'}]}
+2025-11-11 23:40:15,004 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:15,344 [INFO] Stored widget 8123f304-f23f-440b-a6d3-80e979fa4cd6 in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/8123f304-f23f-440b-a6d3-80e979fa4cd6.json
+2025-11-11 23:40:15,423 [INFO] Deleted sample-requests/1612306372166 from usu-cs5270-hair-requests
+2025-11-11 23:40:15,619 [INFO] Processing request: {'type': 'create', 'requestId': '6c37a3ff-26d8-4b2a-900f-2d614267e0e4', 'widgetId': '3750be35-9074-4879-bb43-759d38263868', 'owner': 'Henry Hops', 'label': 'UMNWEHK', 'description': 'BOMKUEDKXDDIPCMMDOMTQWCOVFLDKLMZDQMGEERBTODSVWIGZVYXRXWMTQZHSHYYQUITXESHOD', 'otherAttributes': [{'name': 'size', 'value': '314'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'width', 'value': '637'}, {'name': 'price', 'value': '59.09'}, {'name': 'vendor', 'value': 'S'}]}
+2025-11-11 23:40:15,619 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:15,936 [INFO] Stored widget 3750be35-9074-4879-bb43-759d38263868 in S3 bucket usu-cs5270-hair-web with key widgets/Henry_Hops/3750be35-9074-4879-bb43-759d38263868.json
+2025-11-11 23:40:16,016 [INFO] Deleted sample-requests/1612306372496 from usu-cs5270-hair-requests
+2025-11-11 23:40:16,241 [INFO] Processing request: {'type': 'create', 'requestId': 'c7d8b67f-084a-4eb5-a97f-2c6d7ef29808', 'widgetId': 'deab01f2-0075-4a11-87e1-21cbea5c0c7f', 'owner': 'Henry Hops', 'label': 'DHSRL', 'description': 'XROPEIDSOOJAYOXGY', 'otherAttributes': [{'name': 'size', 'value': '884'}, {'name': 'height', 'value': '51'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'rating', 'value': '4.8361626'}, {'name': 'price', 'value': '34.82'}, {'name': 'quantity', 'value': '297'}, {'name': 'vendor', 'value': 'EPAQ'}]}
+2025-11-11 23:40:16,242 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:16,565 [INFO] Stored widget deab01f2-0075-4a11-87e1-21cbea5c0c7f in S3 bucket usu-cs5270-hair-web with key widgets/Henry_Hops/deab01f2-0075-4a11-87e1-21cbea5c0c7f.json
+2025-11-11 23:40:16,647 [INFO] Deleted sample-requests/1612306372686 from usu-cs5270-hair-requests
+2025-11-11 23:40:16,796 [INFO] Processing request: {'type': 'delete', 'requestId': '9205fcb9-7c74-4db1-8054-33bdd70ed0e8', 'widgetId': '6984abeb-5b24-42eb-93cc-3a5bef6b4b8a', 'owner': 'Mary Matthews'}
+2025-11-11 23:40:16,796 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:17,144 [INFO] Stored widget 6984abeb-5b24-42eb-93cc-3a5bef6b4b8a in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/6984abeb-5b24-42eb-93cc-3a5bef6b4b8a.json
+2025-11-11 23:40:17,221 [INFO] Deleted sample-requests/1612306372894 from usu-cs5270-hair-requests
+2025-11-11 23:40:17,405 [INFO] Processing request: {'type': 'update', 'requestId': '78d3521d-e600-4625-8dd5-57f2948f7cfd', 'widgetId': '3750be35-9074-4879-bb43-759d38263868', 'owner': 'Henry Hops', 'label': 'OCIEDC', 'description': 'LZYARUHFIBOBFEYQEQZLLVALSOWBBLMPHVGAJBBKVMXSVITQSPGREJCPPARSNZQNBWCWXXBPOUKAEDXFLAKG', 'otherAttributes': [{'name': 'color', 'value': 'pink'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length', 'value': '193'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'rating', 'value': '2.506537'}, {'name': 'quantity', 'value': '310'}]}
+2025-11-11 23:40:17,405 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:17,728 [INFO] Stored widget 3750be35-9074-4879-bb43-759d38263868 in S3 bucket usu-cs5270-hair-web with key widgets/Henry_Hops/3750be35-9074-4879-bb43-759d38263868.json
+2025-11-11 23:40:17,807 [INFO] Deleted sample-requests/1612306373189 from usu-cs5270-hair-requests
+2025-11-11 23:40:17,980 [INFO] Processing request: {'type': 'update', 'requestId': '38d51e39-c470-462b-a72b-cfd04335454e', 'widgetId': 'ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6', 'owner': 'John Jones', 'label': '', 'description': 'QQGRLNZY', 'otherAttributes': [{'name': 'color', 'value': 'red'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'height', 'value': '955'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length', 'value': '247'}, {'name': 'price', 'value': '71.11'}, {'name': 'vendor', 'value': 'UPAZOD'}, {'name': 'note', 'value': 'MUUDBUWKGVFCXPEUSKBBBDEYQTZDNWCPPGHFBXPILELOVETUGRTWMEMZMLKUEMAEOZTSMAMNFPISAMWFYZJHDQQSOIPOGFJY'}]}
+2025-11-11 23:40:17,980 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:18,321 [INFO] Stored widget ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6.json
+2025-11-11 23:40:18,405 [INFO] Deleted sample-requests/1612306373502 from usu-cs5270-hair-requests
+2025-11-11 23:40:18,563 [INFO] Processing request: {'type': 'update', 'requestId': 'f2989d03-bc9c-4042-934f-552c076eb2df', 'widgetId': 'ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6', 'owner': 'John Jones', 'description': 'QQGRLNZY', 'otherAttributes': [{'name': 'color', 'value': 'red'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'width', 'value': '699'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length', 'value': '649'}, {'name': 'price', 'value': '73.03'}, {'name': 'quantity', 'value': '76'}, {'name': 'note', 'value': 'UFYFPRFURTHCJJZGHUWDMILVMLWVUOGYJYDOAPPKMXAPXGKMVHETWWFRQTBTGVWSODFDRZKIPAGZQBWKDJVQLXUHRSQKITMECYOYCAMDVIMODOEZQXPGZYXOXPEGQHIKPCOFMILFLVLSFKBITRAKXFFIHQNFUMTOIDLLKHYEMLGBQBDFXXRGJMXELQUDXUQNEZPXSSPHGBQFBBBXYDWLZZBPCIRGNQHHYMEXYLNBTHMFKDQDKNGHDPFDVCQPBNNIIGCBQJJVKXPAHJQHUFSSBWIHNWAXYOQKAWVRSHPEWBJTQKFBKCJWNBUIBPYQUQTIXKLZQLGYITHEDOWAUCUDZOAICRKAJFMPPQAGGEVIISRXGGIIRLIQRTXWVSMRD'}]}
+2025-11-11 23:40:18,563 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:18,911 [INFO] Stored widget ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6 in S3 bucket usu-cs5270-hair-web with key widgets/John_Jones/ad0bb9e1-28e9-46e0-ad08-8192f4d3b6c6.json
+2025-11-11 23:40:18,996 [INFO] Deleted sample-requests/1612306373799 from usu-cs5270-hair-requests
+2025-11-11 23:40:19,156 [INFO] Processing request: {'type': 'update', 'requestId': '389d33cd-34b8-4c33-a6bb-816bef229739', 'widgetId': '3750be35-9074-4879-bb43-759d38263868', 'owner': 'Henry Hops', 'label': 'IEEPEM', 'description': 'BDMPIDRXFXNOMZPNTDUNTAQONWOGRKPXXVBMAUTWFTWXPIUPEFTXXUUOHNAJSFJVPHZT', 'otherAttributes': [{'name': 'color', 'value': 'pink'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length', 'value': '210'}, {'name': 'note', 'value': 'HDXXQXBLYGUILXYZCSHCVQFCKKQQJKTTEXZFXTBKVFJWEJNJBDJZMJJAELQRZTFPUFAKWGNOXQDNRONEGZVLFIMABKNPZYGXHCBBKCJBEEEMJLQGVWACXJISTAZUJVQCQZVSZRATSE'}]}
+2025-11-11 23:40:19,156 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:19,618 [INFO] Stored widget 3750be35-9074-4879-bb43-759d38263868 in S3 bucket usu-cs5270-hair-web with key widgets/Henry_Hops/3750be35-9074-4879-bb43-759d38263868.json
+2025-11-11 23:40:19,693 [INFO] Deleted sample-requests/1612306374092 from usu-cs5270-hair-requests
+2025-11-11 23:40:19,848 [INFO] Processing request: {'type': 'create', 'requestId': '47bb4579-783e-4a50-b388-9c4a2251f85b', 'widgetId': '64542834-2dc1-469f-b3c4-93d124672a4a', 'owner': 'Mary Matthews', 'label': 'FFFJGFWCK', 'description': 'WHTVHIKEMKOXLAQEOPRV', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'size', 'value': '542'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'length', 'value': '79'}, {'name': 'rating', 'value': '4.2154894'}, {'name': 'price', 'value': '13.96'}, {'name': 'vendor', 'value': 'LBOBNLYH'}]}
+2025-11-11 23:40:19,848 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-11 23:40:20,147 [INFO] Stored widget 64542834-2dc1-469f-b3c4-93d124672a4a in S3 bucket usu-cs5270-hair-web with key widgets/Mary_Matthews/64542834-2dc1-469f-b3c4-93d124672a4a.json
+2025-11-11 23:40:20,239 [INFO] Deleted sample-requests/1612306374390 from usu-cs5270-hair-requests
+2025-11-11 23:40:20,247 [INFO] Polling interrupted by user.
+2025-11-15 09:50:18,998 [INFO] Starting consumer with request bucket: None
+2025-11-15 09:50:19,017 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 09:50:19,638 [INFO] Processing create request: {'widgetId': '2001', 'owner': 'karli', 'label': 'Manual SQS Widget', 'description': 'Created manually from the AWS console', 'otherAttributes': [{'name': 'color', 'value': 'purple'}, {'name': 'size', 'value': 'large'}]}
+2025-11-15 09:50:19,638 [INFO] Storing widget in S3 bucket: usu-cs5250-blue-web
+2025-11-15 09:50:24,329 [ERROR] Error processing message: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist
+2025-11-15 09:50:34,436 [INFO] No requests found. Waiting...
+2025-11-15 09:50:45,647 [INFO] No requests found. Waiting...
+2025-11-15 09:50:49,089 [INFO] Polling interrupted by user.
+2025-11-15 09:51:28,988 [INFO] Starting consumer with request bucket: None
+2025-11-15 09:51:29,003 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 09:51:29,626 [INFO] Processing create request: {'widgetId': '2001', 'owner': 'karli', 'label': 'Manual SQS Widget', 'description': 'Created manually from the AWS console', 'otherAttributes': [{'name': 'color', 'value': 'purple'}, {'name': 'size', 'value': 'large'}]}
+2025-11-15 09:51:29,627 [INFO] Storing widget in S3 bucket: usu-cs5250-hair-web
+2025-11-15 09:51:34,389 [ERROR] Error processing message: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist
+2025-11-15 09:51:44,495 [INFO] No requests found. Waiting...
+2025-11-15 09:51:52,693 [INFO] Polling interrupted by user.
+2025-11-15 09:53:28,989 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-15 09:53:29,003 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 09:53:29,631 [INFO] Processing create request: {'widgetId': '2001', 'owner': 'karli', 'label': 'Manual SQS Widget', 'description': 'Created manually from the AWS console', 'otherAttributes': [{'name': 'color', 'value': 'purple'}, {'name': 'size', 'value': 'large'}]}
+2025-11-15 09:53:29,631 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-15 09:53:34,557 [INFO] Stored widget 2001 in S3 bucket usu-cs5270-hair-web with key widgets/karli/2001.json
+2025-11-15 09:53:34,654 [INFO] Deleted message from SQS queue: 17f5a440-1cb7-4682-9158-32d1ad47769f
+2025-11-15 09:53:44,848 [INFO] No requests found. Waiting...
+2025-11-15 09:53:56,007 [INFO] No requests found. Waiting...
+2025-11-15 09:54:07,172 [INFO] No new requests for 30 seconds. Stopping consumer.
+2025-11-15 10:01:19,319 [INFO] Starting consumer (source=S3) with request bucket: cs5270-hair-requests
+2025-11-15 10:01:19,334 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 10:02:35,534 [INFO] Starting consumer (source=S3) with request bucket: usu-cs5270-hair-requests
+2025-11-15 10:02:35,549 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 10:02:40,288 [ERROR] Invalid JSON in sample-requests/1612306374392: 
+2025-11-15 10:02:40,368 [INFO] Deleted sample-requests/1612306374392 from usu-cs5270-hair-requests
+2025-11-15 10:02:40,517 [INFO] Processing request: {'type': 'delete', 'requestId': '123b4579-783e-4a50-b388-9c4a2251e74c', 'widgetId': '64542834-2dc1-469f-b3c4-93d124672a4a', 'owner': 'Mary Matthews'}
+2025-11-15 10:02:40,518 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:40,585 [INFO] Final item to store in DynamoDB: {'id': {'S': '64542834-2dc1-469f-b3c4-93d124672a4a'}, 'owner': {'S': 'Mary Matthews'}, 'type': {'S': 'delete'}, 'requestId': {'S': '123b4579-783e-4a50-b388-9c4a2251e74c'}}
+2025-11-15 10:02:40,798 [INFO] Stored widget 64542834-2dc1-469f-b3c4-93d124672a4a with 4 attributes in DynamoDB table widgets
+2025-11-15 10:02:40,895 [INFO] Verified DynamoDB insert: {'requestId': {'S': '123b4579-783e-4a50-b388-9c4a2251e74c'}, 'owner': {'S': 'Mary Matthews'}, 'id': {'S': '64542834-2dc1-469f-b3c4-93d124672a4a'}, 'type': {'S': 'delete'}}
+2025-11-15 10:02:40,972 [INFO] Deleted sample-requests/1612306374590 from usu-cs5270-hair-requests
+2025-11-15 10:02:41,143 [INFO] Processing request: {'type': 'create', 'requestId': 'f5688e07-c8dc-4547-b852-ca8982b72976', 'widgetId': 'b71b5b2e-610a-402c-8341-a69d8d62747e', 'owner': 'John Jones', 'label': 'CICMV', 'description': 'NQR', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'note', 'value': 'QZRTYQFPTOSJQRKKCYPDVQEQUJMYOYJRKCXIXCQTNUUFQAAUZOORWDBFGYCVOUQSGRGDKDCWXAVZVXAZPASPMQIVFFTIZSYYRDKTXTPQQHNSNQQSSUYNKPQQNVKKXVWTHUUHPZKNDSHWLFJOZAOKMNVYESEEFVECPCWQCPPCABUETCMJRIXYWXDNCSFDTWUXFYCJIKEVQXSKNBSHKWUOYPYMFKECJALUFXXTUMJPGRKTNNXMFLGSKNIJGFOSHEHDZZMHLTUEDJFVFTXO'}]}
+2025-11-15 10:02:41,144 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:41,155 [INFO] Final item to store in DynamoDB: {'id': {'S': 'b71b5b2e-610a-402c-8341-a69d8d62747e'}, 'owner': {'S': 'John Jones'}, 'label': {'S': 'CICMV'}, 'description': {'S': 'NQR'}, 'color': {'S': 'blue'}, 'width-unit': {'S': 'cm'}, 'length-unit': {'S': 'cm'}, 'note': {'S': 'QZRTYQFPTOSJQRKKCYPDVQEQUJMYOYJRKCXIXCQTNUUFQAAUZOORWDBFGYCVOUQSGRGDKDCWXAVZVXAZPASPMQIVFFTIZSYYRDKTXTPQQHNSNQQSSUYNKPQQNVKKXVWTHUUHPZKNDSHWLFJOZAOKMNVYESEEFVECPCWQCPPCABUETCMJRIXYWXDNCSFDTWUXFYCJIKEVQXSKNBSHKWUOYPYMFKECJALUFXXTUMJPGRKTNNXMFLGSKNIJGFOSHEHDZZMHLTUEDJFVFTXO'}, 'type': {'S': 'create'}, 'requestId': {'S': 'f5688e07-c8dc-4547-b852-ca8982b72976'}}
+2025-11-15 10:02:41,370 [INFO] Stored widget b71b5b2e-610a-402c-8341-a69d8d62747e with 10 attributes in DynamoDB table widgets
+2025-11-15 10:02:41,458 [INFO] Verified DynamoDB insert: {'note': {'S': 'QZRTYQFPTOSJQRKKCYPDVQEQUJMYOYJRKCXIXCQTNUUFQAAUZOORWDBFGYCVOUQSGRGDKDCWXAVZVXAZPASPMQIVFFTIZSYYRDKTXTPQQHNSNQQSSUYNKPQQNVKKXVWTHUUHPZKNDSHWLFJOZAOKMNVYESEEFVECPCWQCPPCABUETCMJRIXYWXDNCSFDTWUXFYCJIKEVQXSKNBSHKWUOYPYMFKECJALUFXXTUMJPGRKTNNXMFLGSKNIJGFOSHEHDZZMHLTUEDJFVFTXO'}, 'label': {'S': 'CICMV'}, 'width-unit': {'S': 'cm'}, 'length-unit': {'S': 'cm'}, 'owner': {'S': 'John Jones'}, 'description': {'S': 'NQR'}, 'id': {'S': 'b71b5b2e-610a-402c-8341-a69d8d62747e'}, 'color': {'S': 'blue'}, 'requestId': {'S': 'f5688e07-c8dc-4547-b852-ca8982b72976'}, 'type': {'S': 'create'}}
+2025-11-15 10:02:41,538 [INFO] Deleted sample-requests/1612306374890 from usu-cs5270-hair-requests
+2025-11-15 10:02:41,703 [INFO] Processing request: {'type': 'create', 'requestId': '9902be6e-fe18-46e3-83eb-f49aa5420536', 'widgetId': 'd2d540b0-5999-4d43-8f09-b8f528a0f032', 'owner': 'Sue Smith', 'label': 'G', 'description': 'AYGDDAZYZTGPL', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width', 'value': '353'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'rating', 'value': '3.345904'}, {'name': 'vendor', 'value': 'CTXCQKZRH'}, {'name': 'note', 'value': 'RQOCJENLLWHZUUTRDDXPKWTDRDQJMRKOKYBIVWFNTGMXFDWSIYZFCRMKMBQEGZBJLDWCIOMXHQJHYJRCZBRRRIRTOISLCJPJBYXTDTNMPQTYCPDEDBYJUMRTBRRIKXMAINMONUWMRCFJOGPCUUGVUMNAJMKKETBCCXYYKKUMLBBKYBEFWUCQPWMJPBLKNXKKBFJBYEXRSIVMCTBICSSTGZJGJSYMQEIEGHSOSISZNXTTHEWPEYBQACLCOOVJXBYSCFIMFVWISSHLCODAWWXXHXUJKVWPJEBYFATGBGIXDJJCXSDRWJRKHZJCNBPRNGSMRLBXJLTYLK'}]}
+2025-11-15 10:02:41,704 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:41,719 [INFO] Final item to store in DynamoDB: {'id': {'S': 'd2d540b0-5999-4d43-8f09-b8f528a0f032'}, 'owner': {'S': 'Sue Smith'}, 'label': {'S': 'G'}, 'description': {'S': 'AYGDDAZYZTGPL'}, 'color': {'S': 'blue'}, 'height-unit': {'S': 'cm'}, 'width': {'S': '353'}, 'width-unit': {'S': 'cm'}, 'rating': {'S': '3.345904'}, 'vendor': {'S': 'CTXCQKZRH'}, 'note': {'S': 'RQOCJENLLWHZUUTRDDXPKWTDRDQJMRKOKYBIVWFNTGMXFDWSIYZFCRMKMBQEGZBJLDWCIOMXHQJHYJRCZBRRRIRTOISLCJPJBYXTDTNMPQTYCPDEDBYJUMRTBRRIKXMAINMONUWMRCFJOGPCUUGVUMNAJMKKETBCCXYYKKUMLBBKYBEFWUCQPWMJPBLKNXKKBFJBYEXRSIVMCTBICSSTGZJGJSYMQEIEGHSOSISZNXTTHEWPEYBQACLCOOVJXBYSCFIMFVWISSHLCODAWWXXHXUJKVWPJEBYFATGBGIXDJJCXSDRWJRKHZJCNBPRNGSMRLBXJLTYLK'}, 'type': {'S': 'create'}, 'requestId': {'S': '9902be6e-fe18-46e3-83eb-f49aa5420536'}}
+2025-11-15 10:02:41,928 [INFO] Stored widget d2d540b0-5999-4d43-8f09-b8f528a0f032 with 13 attributes in DynamoDB table widgets
+2025-11-15 10:02:42,028 [INFO] Verified DynamoDB insert: {'height-unit': {'S': 'cm'}, 'rating': {'S': '3.345904'}, 'label': {'S': 'G'}, 'width-unit': {'S': 'cm'}, 'vendor': {'S': 'CTXCQKZRH'}, 'requestId': {'S': '9902be6e-fe18-46e3-83eb-f49aa5420536'}, 'note': {'S': 'RQOCJENLLWHZUUTRDDXPKWTDRDQJMRKOKYBIVWFNTGMXFDWSIYZFCRMKMBQEGZBJLDWCIOMXHQJHYJRCZBRRRIRTOISLCJPJBYXTDTNMPQTYCPDEDBYJUMRTBRRIKXMAINMONUWMRCFJOGPCUUGVUMNAJMKKETBCCXYYKKUMLBBKYBEFWUCQPWMJPBLKNXKKBFJBYEXRSIVMCTBICSSTGZJGJSYMQEIEGHSOSISZNXTTHEWPEYBQACLCOOVJXBYSCFIMFVWISSHLCODAWWXXHXUJKVWPJEBYFATGBGIXDJJCXSDRWJRKHZJCNBPRNGSMRLBXJLTYLK'}, 'width': {'S': '353'}, 'owner': {'S': 'Sue Smith'}, 'description': {'S': 'AYGDDAZYZTGPL'}, 'id': {'S': 'd2d540b0-5999-4d43-8f09-b8f528a0f032'}, 'color': {'S': 'blue'}, 'type': {'S': 'create'}}
+2025-11-15 10:02:42,107 [INFO] Deleted sample-requests/1612306375082 from usu-cs5270-hair-requests
+2025-11-15 10:02:42,286 [INFO] Processing request: {'type': 'bad', 'requestId': '9902be6e-fe18-46e3-83eb-f49aa5420536', 'widgetId': 'd2d540b0-5999-4d43-8f09-b8f528a0f032', 'owner': 'Sue Smith', 'label': 'G', 'description': 'AYGDDAZYZTGPL', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width', 'value': '353'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'rating', 'value': '3.345904'}, {'name': 'vendor', 'value': 'CTXCQKZRH'}, {'name': 'note', 'value': 'RQOCJENLLWHZUUTRDDXPKWTDRDQJMRKOKYBIVWFNTGMXFDWSIYZFCRMKMBQEGZBJLDWCIOMXHQJHYJRCZBRRRIRTOISLCJPJBYXTDTNMPQTYCPDEDBYJUMRTBRRIKXMAINMONUWMRCFJOGPCUUGVUMNAJMKKETBCCXYYKKUMLBBKYBEFWUCQPWMJPBLKNXKKBFJBYEXRSIVMCTBICSSTGZJGJSYMQEIEGHSOSISZNXTTHEWPEYBQACLCOOVJXBYSCFIMFVWISSHLCODAWWXXHXUJKVWPJEBYFATGBGIXDJJCXSDRWJRKHZJCNBPRNGSMRLBXJLTYLK'}]}
+2025-11-15 10:02:42,286 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:42,295 [INFO] Final item to store in DynamoDB: {'id': {'S': 'd2d540b0-5999-4d43-8f09-b8f528a0f032'}, 'owner': {'S': 'Sue Smith'}, 'label': {'S': 'G'}, 'description': {'S': 'AYGDDAZYZTGPL'}, 'color': {'S': 'blue'}, 'height-unit': {'S': 'cm'}, 'width': {'S': '353'}, 'width-unit': {'S': 'cm'}, 'rating': {'S': '3.345904'}, 'vendor': {'S': 'CTXCQKZRH'}, 'note': {'S': 'RQOCJENLLWHZUUTRDDXPKWTDRDQJMRKOKYBIVWFNTGMXFDWSIYZFCRMKMBQEGZBJLDWCIOMXHQJHYJRCZBRRRIRTOISLCJPJBYXTDTNMPQTYCPDEDBYJUMRTBRRIKXMAINMONUWMRCFJOGPCUUGVUMNAJMKKETBCCXYYKKUMLBBKYBEFWUCQPWMJPBLKNXKKBFJBYEXRSIVMCTBICSSTGZJGJSYMQEIEGHSOSISZNXTTHEWPEYBQACLCOOVJXBYSCFIMFVWISSHLCODAWWXXHXUJKVWPJEBYFATGBGIXDJJCXSDRWJRKHZJCNBPRNGSMRLBXJLTYLK'}, 'type': {'S': 'bad'}, 'requestId': {'S': '9902be6e-fe18-46e3-83eb-f49aa5420536'}}
+2025-11-15 10:02:42,519 [INFO] Stored widget d2d540b0-5999-4d43-8f09-b8f528a0f032 with 13 attributes in DynamoDB table widgets
+2025-11-15 10:02:42,617 [INFO] Verified DynamoDB insert: {'height-unit': {'S': 'cm'}, 'rating': {'S': '3.345904'}, 'label': {'S': 'G'}, 'width-unit': {'S': 'cm'}, 'vendor': {'S': 'CTXCQKZRH'}, 'requestId': {'S': '9902be6e-fe18-46e3-83eb-f49aa5420536'}, 'note': {'S': 'RQOCJENLLWHZUUTRDDXPKWTDRDQJMRKOKYBIVWFNTGMXFDWSIYZFCRMKMBQEGZBJLDWCIOMXHQJHYJRCZBRRRIRTOISLCJPJBYXTDTNMPQTYCPDEDBYJUMRTBRRIKXMAINMONUWMRCFJOGPCUUGVUMNAJMKKETBCCXYYKKUMLBBKYBEFWUCQPWMJPBLKNXKKBFJBYEXRSIVMCTBICSSTGZJGJSYMQEIEGHSOSISZNXTTHEWPEYBQACLCOOVJXBYSCFIMFVWISSHLCODAWWXXHXUJKVWPJEBYFATGBGIXDJJCXSDRWJRKHZJCNBPRNGSMRLBXJLTYLK'}, 'width': {'S': '353'}, 'owner': {'S': 'Sue Smith'}, 'description': {'S': 'AYGDDAZYZTGPL'}, 'id': {'S': 'd2d540b0-5999-4d43-8f09-b8f528a0f032'}, 'color': {'S': 'blue'}, 'type': {'S': 'bad'}}
+2025-11-15 10:02:42,696 [INFO] Deleted sample-requests/1612306375135 from usu-cs5270-hair-requests
+2025-11-15 10:02:42,911 [INFO] Processing request: {'type': 'update', 'requestId': '15d55d1c-a71b-45d1-899b-c3f803155a36', 'widgetId': '3750be35-9074-4879-bb43-759d38263868', 'owner': 'Henry Hops', 'label': 'MI', 'description': 'MBBIBR', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'rating', 'value': '1.9087029'}, {'name': 'price', 'value': '72.64'}, {'name': 'quantity', 'value': '892'}, {'name': 'vendor', 'value': 'IYXCQ'}, {'name': 'note', 'value': 'MAILEKHKRCTLRXEIDSBFPETQUWFREMWCDOKJCKPNVJNUUYMDCUINUZTCZKZOFRDSFBYJKCSYQBHOCHDYMVHNBSWNQZRBCHGXCMEVJPYBQPIQUGCILDSSLEREUDPKHMGICYOZJJZZYRFMKWUCIJTYTHWMHSJEFNBIWMHILIBACCANXKMRRGJXZIYGBVSUUFGKWDZMEPGBSYPNSSZWTYCHWCUPWMYKJHORABOGKHFRAJQQTAXVVNFDNTEJIABJSZ'}]}
+2025-11-15 10:02:42,911 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:42,915 [INFO] Final item to store in DynamoDB: {'id': {'S': '3750be35-9074-4879-bb43-759d38263868'}, 'owner': {'S': 'Henry Hops'}, 'label': {'S': 'MI'}, 'description': {'S': 'MBBIBR'}, 'color': {'S': 'blue'}, 'width-unit': {'S': 'cm'}, 'length-unit': {'S': 'cm'}, 'rating': {'S': '1.9087029'}, 'price': {'S': '72.64'}, 'quantity': {'S': '892'}, 'vendor': {'S': 'IYXCQ'}, 'note': {'S': 'MAILEKHKRCTLRXEIDSBFPETQUWFREMWCDOKJCKPNVJNUUYMDCUINUZTCZKZOFRDSFBYJKCSYQBHOCHDYMVHNBSWNQZRBCHGXCMEVJPYBQPIQUGCILDSSLEREUDPKHMGICYOZJJZZYRFMKWUCIJTYTHWMHSJEFNBIWMHILIBACCANXKMRRGJXZIYGBVSUUFGKWDZMEPGBSYPNSSZWTYCHWCUPWMYKJHORABOGKHFRAJQQTAXVVNFDNTEJIABJSZ'}, 'type': {'S': 'update'}, 'requestId': {'S': '15d55d1c-a71b-45d1-899b-c3f803155a36'}}
+2025-11-15 10:02:43,134 [INFO] Stored widget 3750be35-9074-4879-bb43-759d38263868 with 14 attributes in DynamoDB table widgets
+2025-11-15 10:02:43,222 [INFO] Verified DynamoDB insert: {'label': {'S': 'MI'}, 'owner': {'S': 'Henry Hops'}, 'description': {'S': 'MBBIBR'}, 'id': {'S': '3750be35-9074-4879-bb43-759d38263868'}, 'requestId': {'S': '15d55d1c-a71b-45d1-899b-c3f803155a36'}, 'type': {'S': 'update'}, 'quantity': {'S': '892'}, 'rating': {'S': '1.9087029'}, 'width-unit': {'S': 'cm'}, 'length-unit': {'S': 'cm'}, 'color': {'S': 'blue'}, 'vendor': {'S': 'IYXCQ'}, 'note': {'S': 'MAILEKHKRCTLRXEIDSBFPETQUWFREMWCDOKJCKPNVJNUUYMDCUINUZTCZKZOFRDSFBYJKCSYQBHOCHDYMVHNBSWNQZRBCHGXCMEVJPYBQPIQUGCILDSSLEREUDPKHMGICYOZJJZZYRFMKWUCIJTYTHWMHSJEFNBIWMHILIBACCANXKMRRGJXZIYGBVSUUFGKWDZMEPGBSYPNSSZWTYCHWCUPWMYKJHORABOGKHFRAJQQTAXVVNFDNTEJIABJSZ'}, 'price': {'S': '72.64'}}
+2025-11-15 10:02:43,304 [INFO] Deleted sample-requests/1612306375282 from usu-cs5270-hair-requests
+2025-11-15 10:02:43,486 [INFO] Processing request: {'type': 'create', 'requestId': 'ac846257-5b0f-4609-b0b9-93c0bfb8f055', 'widgetId': '08254284-3fd1-4232-905f-b3730a7c6b8c', 'owner': 'Sue Smith', 'label': 'SFB', 'description': 'SUSZNQVRDHAJYCALVX', 'otherAttributes': [{'name': 'size-unit', 'value': 'cm'}, {'name': 'height', 'value': '831'}, {'name': 'width', 'value': '942'}, {'name': 'rating', 'value': '1.141814'}, {'name': 'vendor', 'value': 'M'}]}
+2025-11-15 10:02:43,486 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:43,495 [INFO] Final item to store in DynamoDB: {'id': {'S': '08254284-3fd1-4232-905f-b3730a7c6b8c'}, 'owner': {'S': 'Sue Smith'}, 'label': {'S': 'SFB'}, 'description': {'S': 'SUSZNQVRDHAJYCALVX'}, 'size-unit': {'S': 'cm'}, 'height': {'S': '831'}, 'width': {'S': '942'}, 'rating': {'S': '1.141814'}, 'vendor': {'S': 'M'}, 'type': {'S': 'create'}, 'requestId': {'S': 'ac846257-5b0f-4609-b0b9-93c0bfb8f055'}}
+2025-11-15 10:02:43,705 [INFO] Stored widget 08254284-3fd1-4232-905f-b3730a7c6b8c with 11 attributes in DynamoDB table widgets
+2025-11-15 10:02:43,790 [INFO] Verified DynamoDB insert: {'rating': {'S': '1.141814'}, 'width': {'S': '942'}, 'height': {'S': '831'}, 'label': {'S': 'SFB'}, 'owner': {'S': 'Sue Smith'}, 'size-unit': {'S': 'cm'}, 'description': {'S': 'SUSZNQVRDHAJYCALVX'}, 'id': {'S': '08254284-3fd1-4232-905f-b3730a7c6b8c'}, 'vendor': {'S': 'M'}, 'requestId': {'S': 'ac846257-5b0f-4609-b0b9-93c0bfb8f055'}, 'type': {'S': 'create'}}
+2025-11-15 10:02:43,895 [INFO] Deleted sample-requests/1612306375653 from usu-cs5270-hair-requests
+2025-11-15 10:02:44,065 [INFO] Processing request: {'type': 'create', 'requestId': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808', 'widgetId': '7f0bfd22-876f-42f2-937d-cdf048caec2a', 'owner': 'Mary Matthews', 'label': 'ET', 'description': 'DYNJLGBLSLEZLEJECEVLLXUMNPSJAEYVNECKBQFIHPAOMCSVRHZINZWXDXQFOTXDVCAGSAYK', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'size', 'value': '143'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'height', 'value': '379'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length-unit', 'value': 'cm'}, {'name': 'price', 'value': '31.84'}, {'name': 'quantity', 'value': '650'}, {'name': 'note', 'value': 'EFCQGMBMWWRVXGQUZXUFWSSOUSXZSFEDMGEQISTGTKRAOFAFFSZVJWTLJYPMZWGRSULXEZDSHOXQEMBQPGXBCWSJABNPNEDMTPFJZMXLBOHOJCHLBVGTUDBEJDMOWNQHTTIYHMVPYWSUXYUBPTY'}]}
+2025-11-15 10:02:44,065 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:44,073 [INFO] Final item to store in DynamoDB: {'id': {'S': '7f0bfd22-876f-42f2-937d-cdf048caec2a'}, 'owner': {'S': 'Mary Matthews'}, 'label': {'S': 'ET'}, 'description': {'S': 'DYNJLGBLSLEZLEJECEVLLXUMNPSJAEYVNECKBQFIHPAOMCSVRHZINZWXDXQFOTXDVCAGSAYK'}, 'color': {'S': 'blue'}, 'size': {'S': '143'}, 'size-unit': {'S': 'cm'}, 'height': {'S': '379'}, 'width-unit': {'S': 'cm'}, 'length-unit': {'S': 'cm'}, 'price': {'S': '31.84'}, 'quantity': {'S': '650'}, 'note': {'S': 'EFCQGMBMWWRVXGQUZXUFWSSOUSXZSFEDMGEQISTGTKRAOFAFFSZVJWTLJYPMZWGRSULXEZDSHOXQEMBQPGXBCWSJABNPNEDMTPFJZMXLBOHOJCHLBVGTUDBEJDMOWNQHTTIYHMVPYWSUXYUBPTY'}, 'type': {'S': 'create'}, 'requestId': {'S': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808'}}
+2025-11-15 10:02:44,285 [INFO] Stored widget 7f0bfd22-876f-42f2-937d-cdf048caec2a with 15 attributes in DynamoDB table widgets
+2025-11-15 10:02:44,390 [INFO] Verified DynamoDB insert: {'requestId': {'S': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808'}, 'owner': {'S': 'Mary Matthews'}, 'id': {'S': '7f0bfd22-876f-42f2-937d-cdf048caec2a'}, 'type': {'S': 'create'}, 'quantity': {'S': '650'}, 'size': {'S': '143'}, 'label': {'S': 'ET'}, 'width-unit': {'S': 'cm'}, 'length-unit': {'S': 'cm'}, 'size-unit': {'S': 'cm'}, 'note': {'S': 'EFCQGMBMWWRVXGQUZXUFWSSOUSXZSFEDMGEQISTGTKRAOFAFFSZVJWTLJYPMZWGRSULXEZDSHOXQEMBQPGXBCWSJABNPNEDMTPFJZMXLBOHOJCHLBVGTUDBEJDMOWNQHTTIYHMVPYWSUXYUBPTY'}, 'height': {'S': '379'}, 'description': {'S': 'DYNJLGBLSLEZLEJECEVLLXUMNPSJAEYVNECKBQFIHPAOMCSVRHZINZWXDXQFOTXDVCAGSAYK'}, 'price': {'S': '31.84'}, 'color': {'S': 'blue'}}
+2025-11-15 10:02:44,468 [INFO] Deleted sample-requests/1612306375850 from usu-cs5270-hair-requests
+2025-11-15 10:02:44,611 [INFO] Processing request: {'type': 'create', 'requestId': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808', 'widgetId': 'bad'}
+2025-11-15 10:02:44,611 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:44,616 [INFO] Final item to store in DynamoDB: {'id': {'S': 'bad'}, 'type': {'S': 'create'}, 'requestId': {'S': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808'}}
+2025-11-15 10:02:44,825 [INFO] Stored widget bad with 3 attributes in DynamoDB table widgets
+2025-11-15 10:02:44,925 [INFO] Verified DynamoDB insert: {'id': {'S': 'bad'}, 'type': {'S': 'create'}, 'requestId': {'S': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808'}}
+2025-11-15 10:02:45,002 [INFO] Deleted sample-requests/1612306375892 from usu-cs5270-hair-requests
+2025-11-15 10:02:45,146 [INFO] Processing request: {'type': 'delete', 'requestId': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808', 'widgetId': '7f0bfd22-876f-42f2-937d-cdf048caec2a', 'owner': 'Mary Matthews'}
+2025-11-15 10:02:45,146 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:45,153 [INFO] Final item to store in DynamoDB: {'id': {'S': '7f0bfd22-876f-42f2-937d-cdf048caec2a'}, 'owner': {'S': 'Mary Matthews'}, 'type': {'S': 'delete'}, 'requestId': {'S': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808'}}
+2025-11-15 10:02:45,366 [INFO] Stored widget 7f0bfd22-876f-42f2-937d-cdf048caec2a with 4 attributes in DynamoDB table widgets
+2025-11-15 10:02:45,450 [INFO] Verified DynamoDB insert: {'requestId': {'S': '6f6121c7-14d6-4d0a-a431-9f1a6dde8808'}, 'owner': {'S': 'Mary Matthews'}, 'id': {'S': '7f0bfd22-876f-42f2-937d-cdf048caec2a'}, 'type': {'S': 'delete'}}
+2025-11-15 10:02:45,531 [INFO] Deleted sample-requests/1612306375912 from usu-cs5270-hair-requests
+2025-11-15 10:02:45,704 [INFO] Processing request: {'type': 'update', 'requestId': 'd61c3e72-1a66-4cfa-9162-56712e4580d8', 'widgetId': '6984abeb-5b24-42eb-93cc-3a5bef6b4b8a', 'owner': 'Mary Matthews', 'description': 'PUMMCL', 'otherAttributes': [{'name': 'size', 'value': '745'}, {'name': 'size-unit', 'value': 'cm'}, {'name': 'height', 'value': '879'}, {'name': 'height-unit', 'value': 'cm'}, {'name': 'width-unit', 'value': 'cm'}, {'name': 'length', 'value': '793'}, {'name': 'price', 'value': '50.96'}, {'name': 'quantity', 'value': '311'}, {'name': 'note', 'value': 'MYEVVLRLAWVRZTQIMWRTJFDZTSJNJTWXQBFXOBABMNGJDCWRJMAGVYSWWAPYWDCHSDKFAURWSBHGABSMVKRLQZKXEXJLNXZU'}]}
+2025-11-15 10:02:45,704 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:45,711 [INFO] Final item to store in DynamoDB: {'id': {'S': '6984abeb-5b24-42eb-93cc-3a5bef6b4b8a'}, 'owner': {'S': 'Mary Matthews'}, 'description': {'S': 'PUMMCL'}, 'size': {'S': '745'}, 'size-unit': {'S': 'cm'}, 'height': {'S': '879'}, 'height-unit': {'S': 'cm'}, 'width-unit': {'S': 'cm'}, 'length': {'S': '793'}, 'price': {'S': '50.96'}, 'quantity': {'S': '311'}, 'note': {'S': 'MYEVVLRLAWVRZTQIMWRTJFDZTSJNJTWXQBFXOBABMNGJDCWRJMAGVYSWWAPYWDCHSDKFAURWSBHGABSMVKRLQZKXEXJLNXZU'}, 'type': {'S': 'update'}, 'requestId': {'S': 'd61c3e72-1a66-4cfa-9162-56712e4580d8'}}
+2025-11-15 10:02:45,928 [INFO] Stored widget 6984abeb-5b24-42eb-93cc-3a5bef6b4b8a with 14 attributes in DynamoDB table widgets
+2025-11-15 10:02:46,017 [INFO] Verified DynamoDB insert: {'owner': {'S': 'Mary Matthews'}, 'id': {'S': '6984abeb-5b24-42eb-93cc-3a5bef6b4b8a'}, 'requestId': {'S': 'd61c3e72-1a66-4cfa-9162-56712e4580d8'}, 'type': {'S': 'update'}, 'quantity': {'S': '311'}, 'height-unit': {'S': 'cm'}, 'size': {'S': '745'}, 'width-unit': {'S': 'cm'}, 'size-unit': {'S': 'cm'}, 'note': {'S': 'MYEVVLRLAWVRZTQIMWRTJFDZTSJNJTWXQBFXOBABMNGJDCWRJMAGVYSWWAPYWDCHSDKFAURWSBHGABSMVKRLQZKXEXJLNXZU'}, 'length': {'S': '793'}, 'height': {'S': '879'}, 'description': {'S': 'PUMMCL'}, 'price': {'S': '50.96'}}
+2025-11-15 10:02:46,093 [INFO] Deleted sample-requests/1612306376056 from usu-cs5270-hair-requests
+2025-11-15 10:02:46,251 [INFO] Processing request: {'type': 'create', 'requestId': '21cf74b2-dbf2-46bb-a274-b8e3eac679bf', 'widgetId': 'e50b4381-4332-438f-bcec-bd2b8c0fa5ed', 'owner': 'Sue Smith', 'label': 'CKVJHJOIF', 'description': 'FWGRYBVBDLYAHETWXKTREZVROSBGNZLVPIWEP', 'otherAttributes': [{'name': 'height', 'value': '786'}, {'name': 'width-unit', 'value': 'cm'}]}
+2025-11-15 10:02:46,251 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:46,259 [INFO] Final item to store in DynamoDB: {'id': {'S': 'e50b4381-4332-438f-bcec-bd2b8c0fa5ed'}, 'owner': {'S': 'Sue Smith'}, 'label': {'S': 'CKVJHJOIF'}, 'description': {'S': 'FWGRYBVBDLYAHETWXKTREZVROSBGNZLVPIWEP'}, 'height': {'S': '786'}, 'width-unit': {'S': 'cm'}, 'type': {'S': 'create'}, 'requestId': {'S': '21cf74b2-dbf2-46bb-a274-b8e3eac679bf'}}
+2025-11-15 10:02:46,472 [INFO] Stored widget e50b4381-4332-438f-bcec-bd2b8c0fa5ed with 8 attributes in DynamoDB table widgets
+2025-11-15 10:02:46,564 [INFO] Verified DynamoDB insert: {'owner': {'S': 'Sue Smith'}, 'id': {'S': 'e50b4381-4332-438f-bcec-bd2b8c0fa5ed'}, 'requestId': {'S': '21cf74b2-dbf2-46bb-a274-b8e3eac679bf'}, 'type': {'S': 'create'}, 'height': {'S': '786'}, 'label': {'S': 'CKVJHJOIF'}, 'width-unit': {'S': 'cm'}, 'description': {'S': 'FWGRYBVBDLYAHETWXKTREZVROSBGNZLVPIWEP'}}
+2025-11-15 10:02:46,647 [INFO] Deleted sample-requests/1612306376404 from usu-cs5270-hair-requests
+2025-11-15 10:02:46,790 [INFO] Processing request: {'type': 'delete', 'requestId': '21cf74b2-dbf2-46bb-a274-b8e3eac679bf', 'widgetId': 'e50b4381-4332-438f-bcec-bd2b8c0fa5ed', 'owner': 'Sue Smith'}
+2025-11-15 10:02:46,790 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 10:02:46,796 [INFO] Final item to store in DynamoDB: {'id': {'S': 'e50b4381-4332-438f-bcec-bd2b8c0fa5ed'}, 'owner': {'S': 'Sue Smith'}, 'type': {'S': 'delete'}, 'requestId': {'S': '21cf74b2-dbf2-46bb-a274-b8e3eac679bf'}}
+2025-11-15 10:02:47,007 [INFO] Stored widget e50b4381-4332-438f-bcec-bd2b8c0fa5ed with 4 attributes in DynamoDB table widgets
+2025-11-15 10:02:47,103 [INFO] Verified DynamoDB insert: {'owner': {'S': 'Sue Smith'}, 'id': {'S': 'e50b4381-4332-438f-bcec-bd2b8c0fa5ed'}, 'requestId': {'S': '21cf74b2-dbf2-46bb-a274-b8e3eac679bf'}, 'type': {'S': 'delete'}}
+2025-11-15 10:02:47,177 [INFO] Deleted sample-requests/1612306377574 from usu-cs5270-hair-requests
+2025-11-15 10:02:47,245 [INFO] No requests found. Waiting...
+2025-11-15 10:02:48,329 [INFO] No requests found. Waiting...
+2025-11-15 10:02:49,400 [INFO] No requests found. Waiting...
+2025-11-15 10:02:50,481 [INFO] No requests found. Waiting...
+2025-11-15 10:02:51,558 [INFO] No requests found. Waiting...
+2025-11-15 10:02:52,652 [INFO] No requests found. Waiting...
+2025-11-15 10:02:53,733 [INFO] No requests found. Waiting...
+2025-11-15 10:02:54,807 [INFO] No requests found. Waiting...
+2025-11-15 10:02:55,887 [INFO] No requests found. Waiting...
+2025-11-15 10:02:56,963 [INFO] No requests found. Waiting...
+2025-11-15 10:02:58,077 [INFO] No requests found. Waiting...
+2025-11-15 10:02:59,153 [INFO] No requests found. Waiting...
+2025-11-15 10:03:00,241 [INFO] No requests found. Waiting...
+2025-11-15 10:03:01,314 [INFO] No requests found. Waiting...
+2025-11-15 10:03:02,399 [INFO] No requests found. Waiting...
+2025-11-15 10:03:03,474 [INFO] No requests found. Waiting...
+2025-11-15 10:03:04,550 [INFO] No requests found. Waiting...
+2025-11-15 10:03:05,627 [INFO] No requests found. Waiting...
+2025-11-15 10:03:06,707 [INFO] No new requests for 30 seconds. Stopping consumer.
+2025-11-15 11:18:35,703 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-15 11:18:35,717 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 11:18:36,218 [WARNING] Unsupported operation 'create' in message: {'operation': 'create', 'widget': {'widgetId': 'test-123', 'owner': 'karli', 'label': 'S3 Test Widget', 'description': 'This widget will be added to S3 for testing.', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'shape', 'value': 'square'}]}}
+2025-11-15 11:18:36,285 [INFO] Deleted message from SQS queue: d45ea2f1-5305-4472-a48c-a69d6c288bb7
+2025-11-15 11:18:46,364 [INFO] No requests found. Waiting...
+2025-11-15 11:18:57,446 [INFO] No requests found. Waiting...
+2025-11-15 11:19:08,524 [INFO] No new requests for 30 seconds. Stopping consumer.
+2025-11-15 11:21:23,953 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-15 11:21:23,969 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 11:21:24,447 [INFO] Processing create request: {'widgetId': 'test-123', 'owner': 'karli', 'label': 'S3 Test Widget', 'description': 'This widget will be added to S3 for testing.', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'shape', 'value': 'square'}]}
+2025-11-15 11:21:24,447 [INFO] Storing widget in S3 bucket: usu-cs5250-blue-web
+2025-11-15 11:21:24,780 [ERROR] Error processing message: An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist
+2025-11-15 11:21:34,922 [INFO] No requests found. Waiting...
+2025-11-15 11:21:38,305 [INFO] Polling interrupted by user.
+2025-11-15 11:21:50,980 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-15 11:21:50,998 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 11:21:54,471 [INFO] Processing create request: {'widgetId': 'test-123', 'owner': 'karli', 'label': 'S3 Test Widget', 'description': 'This widget will be added to S3 for testing.', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'shape', 'value': 'square'}]}
+2025-11-15 11:21:54,472 [INFO] Storing widget in S3 bucket: usu-cs5270-hair-web
+2025-11-15 11:21:54,902 [INFO] Stored widget test-123 in S3 bucket usu-cs5270-hair-web with key widgets/karli/test-123.json
+2025-11-15 11:21:54,973 [INFO] Deleted message from SQS queue: 89ee2f7e-1d78-4982-8744-eeeccb24845d
+2025-11-15 11:22:05,078 [INFO] No requests found. Waiting...
+2025-11-15 11:22:16,188 [INFO] No requests found. Waiting...
+2025-11-15 11:22:27,342 [INFO] No new requests for 30 seconds. Stopping consumer.
+2025-11-15 11:23:03,523 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-15 11:23:03,542 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 11:23:14,016 [INFO] No requests found. Waiting...
+2025-11-15 11:23:24,487 [INFO] Deleted widget test-123 from S3 bucket usu-cs5270-hair-web with key widgets/karli/test-123.json
+2025-11-15 11:23:24,553 [INFO] Deleted message from SQS queue: 6d01c1ce-88ec-4324-8d67-78dfe7a9d12e
+2025-11-15 11:23:34,618 [INFO] No requests found. Waiting...
+2025-11-15 11:23:45,749 [INFO] No requests found. Waiting...
+2025-11-15 11:23:56,829 [INFO] No new requests for 30 seconds. Stopping consumer.
+2025-11-15 11:25:06,104 [INFO] Starting consumer (source=S3) with request bucket: None
+2025-11-15 11:25:06,121 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 11:28:14,163 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-15 11:28:14,178 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 11:28:14,647 [INFO] Processing create request: {'widgetId': 'test-123', 'owner': 'karli', 'label': 'S3 Test Widget', 'description': 'This widget will be added to S3 for testing.', 'otherAttributes': [{'name': 'color', 'value': 'blue'}, {'name': 'shape', 'value': 'square'}]}
+2025-11-15 11:28:14,648 [INFO] Storing widget in DynamoDB table: widgets
+2025-11-15 11:28:14,692 [INFO] Final item to store in DynamoDB: {'id': {'S': 'test-123'}, 'owner': {'S': 'karli'}, 'label': {'S': 'S3 Test Widget'}, 'description': {'S': 'This widget will be added to S3 for testing.'}, 'color': {'S': 'blue'}, 'shape': {'S': 'square'}}
+2025-11-15 11:28:14,896 [INFO] Stored widget test-123 with 6 attributes in DynamoDB table widgets
+2025-11-15 11:28:14,980 [INFO] Verified DynamoDB insert: {'owner': {'S': 'karli'}, 'shape': {'S': 'square'}, 'description': {'S': 'This widget will be added to S3 for testing.'}, 'id': {'S': 'test-123'}, 'color': {'S': 'blue'}, 'label': {'S': 'S3 Test Widget'}}
+2025-11-15 11:28:15,046 [INFO] Deleted message from SQS queue: e4e2fd39-83dd-4f80-a65a-68c98f7d2864
+2025-11-15 11:28:25,114 [INFO] No requests found. Waiting...
+2025-11-15 11:28:28,065 [INFO] Polling interrupted by user.
+2025-11-15 11:30:47,541 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-15 11:30:47,562 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-11-15 11:30:58,095 [INFO] No requests found. Waiting...
+2025-11-15 11:31:06,554 [INFO] Deleted widget test-123 from DynamoDB table widgets
+2025-11-15 11:31:06,617 [INFO] Deleted message from SQS queue: 601e9a66-0b13-4e5c-90f2-189824ed427e
+2025-11-15 11:31:16,739 [INFO] No requests found. Waiting...
+2025-11-15 11:31:18,829 [INFO] Polling interrupted by user.
