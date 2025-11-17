@@ -133,10 +133,10 @@ def delete_widget(widget, args, dynamodb=None, s3=None):
         logging.info(f"Deleted widget {widget_id} from DynamoDB table {args.dynamodb_widget_table}")
     
 
-def update_widget(widget, args):    
+def update_widget(widget, args, dynamodb=None, s3=None):    
     # I think it might be easiest if I delete then just put it in again.
 
-    delete_widget(widget, args)
+    delete_widget(widget, args, s3=s3, dynamodb=dynamodb)
     if args.widget_bucket:
         logging.info(f"Updating widget in S3 bucket: {args.widget_bucket}")
         store_s3_widget(widget, args.widget_bucket)
@@ -191,7 +191,6 @@ def poll_s3_requests(bucket_name, args):
         sys.exit(0)
 
 def poll_sqs_requests(queue_name, args):
-    #TODO: Test
     sqs = boto3.client('sqs')
     queue_url = sqs.get_queue_url(QueueName=queue_name)['QueueUrl']
     idle_timeout = 30      

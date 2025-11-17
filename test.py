@@ -1,6 +1,7 @@
 import os, sys, json
 import unittest
-from consumer import store_dynamodb_widget, store_s3_widget, delete_widget
+import consumer
+from consumer import store_dynamodb_widget, store_s3_widget, delete_widget,update_widget
 
 # this helped me get more familiar with unittest: https://docs.python.org/3/library/unittest.html
 
@@ -14,6 +15,23 @@ class dynamoDB:
         return {"Item": self.items.get((TableName, Key["id"]["S"]))}
     def delete_item(self, TableName, Key):
         return self.items.pop((TableName, Key["id"]["S"]), None)
+    def update_item(self, TableName, Key, AttributeUpdates):
+        item_key = (TableName, Key["id"]["S"])
+        item = self.items.get(item_key)
+
+        if not item:
+            return
+        
+        for attribute, action in AttributeUpdates.items():
+            value = action.get("Value", None)
+
+            if action.get("Action") == "DELETE":
+                item.pop(attribute, None)
+            else:
+                item[attribute] = value
+        self.items[item_key] = item
+        return {"Attributes": item}
+        
 
 class s3Client:
     def __init__(self):
@@ -24,12 +42,67 @@ class s3Client:
             "Body": Body,
             "ContentType": ContentType
         }
+    def delete_object(self, Bucket, Key):
+        return self.objects.pop((Bucket, Key), None)
+    def update_object(self, Bucket, Key, Body, ContentType):
+        if (Bucket, Key) in self.objects:
+            self.objects[(Bucket, Key)] = {
+                "Body": Body,
+                "ContentType": ContentType
+            }
 
 class testConsumer(unittest.TestCase):
 
+    def test_update_dyanmodb(self):
+        """
+        I will be testing updating dynamo db
+        """
+        fake_dynamodb = dynamoDB()
+        fake_dynamodb.items[("widgets", "test-123")] = {
+            "id": {"S": "test-123"},
+            "owner": {"S": "karli"},
+            "label": {"S": "Old Label"},
+            "description": {"S": "Old Description"}
+        }
+
+        request = {
+            "type": "update",
+            "requestId": "req-11",
+            "widgetId": "test-123",
+            "owner": "karli",
+            "label": "New Label",
+            "description": "New Description"
+        }
+    
+        class Args:
+            def __init__(self):
+                self.widget_bucket = None
+                self.dynamodb_widget_table = "widgets"
+                self.region = "us-east-1"
+
+        args = Args()
+
+        # the below helps it to use the fake dynamodb instead of real one
+
+        original_store = consumer.store_dynamodb_widget
+
+        def fake_store_dynamodb_widget(request, table_name, region, dynamodb=None):
+            return original_store(request, table_name, region, dynamodb=fake_dynamodb)
+        
+        consumer.store_dynamodb_widget = fake_store_dynamodb_widget
+
+        consumer.update_widget(request, args)
+
+        key = ("widgets", "test-123")
+        self.assertIn(key, fake_dynamodb.items)
+        updated = fake_dynamodb.items[key]
+        self.assertEqual(updated["label"]["S"], "New Label")
+        self.assertEqual(updated["description"]["S"], "New Description")
+
+
     def test_delete_dynamodb(self):
         """
-        Test that widget is deleted successfully
+        Test that widget is deleted successfully in dynamodb
         """
         fake_dynamodb = dynamoDB()
         fake_dynamodb.items[("widgets", "test-123")] = {
@@ -55,7 +128,147 @@ class testConsumer(unittest.TestCase):
 
         self.assertNotIn(("widgets", "test-123"), fake_dynamodb.items)
 
+    def test_delete_s3(self):
+        """
+        Test that widget is deleted successfully in s3
+        """
+        fake_s3 = s3Client()
+        fake_s3.objects[("my-widget-bucket", "widgets/karli/test-123.json")] = {
+            "Body": "test content",
+            "ContentType": "application/json"
+        }
+        request = {
+            "type": "delete",
+            "requestId": "req-11",
+            "widgetId": "test-123",
+            "owner": "karli"
+        }
+
+        class Args:
+            def __init__(self):
+                self.widget_bucket = "my-widget-bucket"
+                self.dynamodb_widget_table = None
+                self.region = "us-east-1"
+
+        args = Args()
+
+        delete_widget(request, args, dynamodb=None, s3=fake_s3)
+
+        self.assertNotIn(("widgets", "test-123"), fake_s3.objects)
+
+    def test_update_s3(self):
+        """
+        Test that widget is updated successfully in s3
+        """
+        fake_s3 = s3Client()
+        fake_s3.objects[("my-widget-bucket", "widgets/karli/test-123.json")] = {
+            "Body": "test content",
+            "ContentType": "application/json"
+        }
+        request = {
+            "type": "update",
+            "requestId": "req-11",
+            "widgetId": "test-123",
+            "owner": "karli",
+            "Body": "updated content"
+        }
+
+        class Args:
+            def __init__(self):
+                self.widget_bucket = "my-widget-bucket"
+                self.dynamodb_widget_table = None
+                self.region = "us-east-1"
+
+        args = Args()
+
+        # kept getting errors about args not being set, so set it here
+
+        consumer.args = args # this helps so that the region doesn't creash
+
+        original_store = consumer.store_s3_widget # my actual function
+
+        def fake_store_s3_widget(request, bucket_name, s3=None):
+            return original_store(request, bucket_name, s3=fake_s3)
+
+        consumer.store_s3_widget = fake_store_s3_widget
+
+        update_widget(request, args, dynamodb=None, s3=fake_s3) # this can now use the fake request
+
+        consumer.store_s3_widget = original_store
+
+        key = ("my-widget-bucket", "widgets/karli/test-123.json")
+        self.assertIn(key, fake_s3.objects)
+        saved = fake_s3.objects[key]
+        body = saved["Body"].decode("utf-8") 
+        self.assertIn("updated content", body)
+
     
+    def test_sqs_to_s3(self):
+        """
+        Test that widget is stored in s3 from sqs message
+        """
+        
+        s3 = s3Client()
+
+        # this is like the queue
+        message_body = json.dumps({
+            "type": "create",
+            "widgetId": "789",
+            "owner": "sqs_owner",
+            "label": "SQS Widget",
+            "description": "A widget from SQS",
+            "otherAttributes": [
+                {"name": "color", "value": "blue"},
+                {"name": "size", "value": "222"}
+            ],
+        })
+
+        request = json.loads(message_body)
+        store_s3_widget(request, "sqs-widget-bucket", s3=s3)
+
+        key = ("sqs-widget-bucket", "widgets/sqs_owner/789.json")
+
+        self.assertIn(key, s3.objects)
+
+        saved = s3.objects[key]
+        self.assertEqual(saved["Body"].decode("utf-8"), '{"type": "create", "widgetId": "789", "owner": "sqs_owner", "label": "SQS Widget", "description": "A widget from SQS", "otherAttributes": [{"name": "color", "value": "blue"}, {"name": "size", "value": "222"}]}')
+
+    def test_sqs_to_dynamodb(self):
+        """
+        Test that widget is stored in dynamo from sqs message
+        """
+        
+        fake_dynamoDB = dynamoDB()
+
+        # this is like the queue
+        message_body = json.dumps({
+            "type": "create",
+            "widgetId": "789",
+            "owner": "sqs_owner",
+            "label": "SQS Widget",
+            "description": "A widget from SQS",
+            "otherAttributes": [
+                {"name": "color", "value": "blue"},
+                {"name": "size", "value": "222"}
+            ],
+        })
+
+        request = json.loads(message_body)
+        store_dynamodb_widget(request, "sqs-widget-bucket", region = "us-east-1", dynamodb=fake_dynamoDB)
+
+        key = ("sqs-widget-bucket", "789")
+
+        self.assertIn(key, fake_dynamoDB.items)
+
+        saved = fake_dynamoDB.items[key]
+        self.assertEqual(saved["owner"]["S"], "sqs_owner")
+        self.assertEqual(saved["label"]["S"], "SQS Widget")
+        self.assertEqual(saved["description"]["S"], "A widget from SQS")
+        self.assertEqual(saved["color"]["S"], "blue")
+        self.assertEqual(saved["size"]["S"], "222")
+
+
+
     def test_Dynamodb(self):
         """
         Test that widget is made successfully
