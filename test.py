@@ -82,7 +82,7 @@ class testConsumer(unittest.TestCase):
 
         args = Args()
 
-        # the below helps it to use the fake dynamodb instead of real one
+        # the below helps it to use the fake dynamodb instead of real one, kept getting errors due to wanting to use real dynamoDB so this is what I could find that worked.
 
         original_store = consumer.store_dynamodb_widget
 
