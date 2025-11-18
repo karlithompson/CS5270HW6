@@ -209,7 +209,9 @@ def poll_sqs_requests(queue_name, args):
             if not messages:
                 if time.time() - last_activity > idle_timeout:
                     logging.info(f"No new requests for {idle_timeout} seconds. Stopping consumer.")
+                    print("No new requests for idle timeout period. Stopping consumer.")
                     break
+                print("No requests found. Waiting...")
                 logging.info("No requests found. Waiting...")
                 time.sleep(poll_interval)
                 continue
@@ -217,9 +219,10 @@ def poll_sqs_requests(queue_name, args):
             for msg in messages:
                 try:
                     body = json.loads(msg['Body'])
+                    print(f"Received message: {msg['Body']}")
                     op = body.get("operation", body.get("type", "create")).lower()#Default to create
                     widget = body.get("widget", body) # in case operation is not there, assume whole body is widget
-
+                    print("processing...")
                     if op == "create":
                         logging.info(f"Processing create request: {widget}")
 
@@ -237,6 +240,7 @@ def poll_sqs_requests(queue_name, args):
                         update_widget(widget, args)
                     else:
                         logging.warning(f"Unsupported operation '{op}' in message: {body}")
+                    print("Put or update in DynamoDB table")
 
                     sqs.delete_message( 
                         QueueUrl=queue_url,
@@ -253,6 +257,13 @@ def poll_sqs_requests(queue_name, args):
         sys.exit(0)
 
 def poll_requests(bucket_name, args):
+    print("Starting Consumer...")
+    print(f"Profile: {args.profile if hasattr(args, 'profile') else 'default'}")
+    print(f"Region: {args.region}")
+    print(f"Request queue: {args.queue_name}")
+    print(f"DynamoDB table: {args.dynamodb_widget_table}")
+    print(f"S3 bucket: {args.widget_bucket}")
+    print(f"Max runtime: {args.max_runtime if hasattr(args, 'max_runtime') else 'N/A'}")
     if args.queue_name:
         poll_sqs_requests(args.queue_name, args)
     else:
