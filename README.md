@@ -20,6 +20,11 @@ Run the following for help:
 python3 consumer.py --help
 ```
 
+Running docker:
+```
+docker run --env-file docker.env consumer:2.3
+```
+
 ### Example
 
 Example delete json:

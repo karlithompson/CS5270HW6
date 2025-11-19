@@ -7227,3 +7227,5 @@
 2025-11-17 20:52:03,436 [INFO] No requests found. Waiting...
 2025-11-17 20:52:14,106 [INFO] No new requests for 30 seconds. Stopping consumer.
 2025-11-17 20:52:14,513 [INFO] No new requests for 30 seconds. Stopping consumer.
+2025-11-18 19:49:19,772 [INFO] Starting consumer (source=SQS) with queue: cs5270-requests
+2025-11-18 19:49:19,788 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
